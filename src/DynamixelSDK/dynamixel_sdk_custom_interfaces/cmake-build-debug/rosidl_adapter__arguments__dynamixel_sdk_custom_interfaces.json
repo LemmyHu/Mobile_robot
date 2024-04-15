@@ -1,0 +1,9 @@
+{
+  "package_name": "dynamixel_sdk_custom_interfaces",
+  "non_idl_tuples": [
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:msg/SetVelocity.msg",
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:msg/SetPosition.msg",
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:srv/GetVelocity.srv",
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:srv/GetPosition.srv"
+  ]
+}
