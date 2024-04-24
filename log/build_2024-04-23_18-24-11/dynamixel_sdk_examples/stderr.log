@@ -1,7 +1,0 @@
-[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:[m[K In member function ‘[01m[Kvoid PositionControlNode::handle_position(dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::SharedPtr)[m[K’:
-[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:157:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kids[m[K’ was not declared in this scope
-  157 |     publishMovingStatus([01;31m[Kids[m[K, moving_statuses);
-      |                         [01;31m[K^~~[m[K
-gmake[2]: *** [CMakeFiles/position_control_node.dir/build.make:76: CMakeFiles/position_control_node.dir/src/position_control_node.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/position_control_node.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2
