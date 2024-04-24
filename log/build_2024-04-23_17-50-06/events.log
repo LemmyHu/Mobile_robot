@@ -1,0 +1,798 @@
+[0.000000] (-) TimerEvent: {}
+[0.001598] (dynamixel_sdk) JobQueued: {'identifier': 'dynamixel_sdk', 'dependencies': OrderedDict()}
+[0.002128] (dynamixel_sdk_custom_interfaces) JobQueued: {'identifier': 'dynamixel_sdk_custom_interfaces', 'dependencies': OrderedDict()}
+[0.002219] (wheels_control) JobQueued: {'identifier': 'wheels_control', 'dependencies': OrderedDict()}
+[0.002295] (dynamixel_sdk_examples) JobQueued: {'identifier': 'dynamixel_sdk_examples', 'dependencies': OrderedDict([('dynamixel_sdk', '/home/lemmy/robotis_ws/install/dynamixel_sdk'), ('dynamixel_sdk_custom_interfaces', '/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces')])}
+[0.002385] (joystick_listener) JobQueued: {'identifier': 'joystick_listener', 'dependencies': OrderedDict([('dynamixel_sdk_custom_interfaces', '/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces')])}
+[0.002469] (dynamixel_sdk_custom_interfaces) JobStarted: {'identifier': 'dynamixel_sdk_custom_interfaces'}
+[0.036172] (dynamixel_sdk) JobStarted: {'identifier': 'dynamixel_sdk'}
+[0.062658] (wheels_control) JobStarted: {'identifier': 'wheels_control'}
+[0.099075] (-) TimerEvent: {}
+[0.103540] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'cmake'}
+[0.106561] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'build'}
+[0.109644] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lemmy/robotis_ws/build/dynamixel_sdk_custom_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/lemmy/robotis_ws/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lemmy'), ('SSH_CLIENT', '192.168.1.134 58701 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/lemmy/robotis_ws/install/joystick_listener/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk/lib:/home/lemmy/ros2_ws/install/dynamixel_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/lemmy'), ('OLDPWD', '/home/lemmy'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/lemmy/robotis_ws/install:/home/lemmy/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'lemmy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/my_robot_controller:/home/lemmy/ros2_ws/install/dynamixel_hardware:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/lemmy/robotis_ws/build/dynamixel_sdk_custom_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.134 58701 192.168.1.91 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages:/home/lemmy/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/dynamixel_hardware:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble')]), 'shell': False}
+[0.122985] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'cmake'}
+[0.125616] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'build'}
+[0.131788] (dynamixel_sdk) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lemmy/robotis_ws/build/dynamixel_sdk', '--', '-j4', '-l4'], 'cwd': '/home/lemmy/robotis_ws/build/dynamixel_sdk', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lemmy'), ('SSH_CLIENT', '192.168.1.134 58701 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/lemmy/robotis_ws/install/joystick_listener/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk/lib:/home/lemmy/ros2_ws/install/dynamixel_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/lemmy'), ('OLDPWD', '/home/lemmy'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/lemmy/robotis_ws/install:/home/lemmy/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'lemmy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/my_robot_controller:/home/lemmy/ros2_ws/install/dynamixel_hardware:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/lemmy/robotis_ws/build/dynamixel_sdk'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.134 58701 192.168.1.91 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages:/home/lemmy/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/dynamixel_hardware:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble')]), 'shell': False}
+[0.199275] (-) TimerEvent: {}
+[0.300191] (-) TimerEvent: {}
+[0.395906] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[  1%] Built target dynamixel_sdk_custom_interfaces__cpp\n'}
+[0.400537] (-) TimerEvent: {}
+[0.439255] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 12%] Built target dynamixel_sdk_custom_interfaces__rosidl_generator_c\n'}
+[0.480048] (dynamixel_sdk) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk\n'}
+[0.500723] (-) TimerEvent: {}
+[0.547513] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_dynamixel_sdk_custom_interfaces\n'}
+[0.600930] (-) TimerEvent: {}
+[0.603358] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 23%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp\n'}
+[0.635151] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 35%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.701169] (-) TimerEvent: {}
+[0.703990] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 46%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.741967] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 57%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.748720] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 69%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.801431] (-) TimerEvent: {}
+[0.814501] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 80%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c\n'}
+[0.901745] (-) TimerEvent: {}
+[0.952044] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 80%] Built target dynamixel_sdk_custom_interfaces\n'}
+[1.002017] (-) TimerEvent: {}
+[1.083997] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 81%] Built target dynamixel_sdk_custom_interfaces__py\n'}
+[1.102271] (-) TimerEvent: {}
+[1.203078] (-) TimerEvent: {}
+[1.234733] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 91%] Built target dynamixel_sdk_custom_interfaces__rosidl_generator_py\n'}
+[1.303408] (-) TimerEvent: {}
+[1.400274] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 94%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[1.403819] (-) TimerEvent: {}
+[1.420732] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 97%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.445338] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c__pyext\n'}
+[1.503971] (-) TimerEvent: {}
+[1.604749] (-) TimerEvent: {}
+[1.671377] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[1.705018] (-) TimerEvent: {}
+[1.726359] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'writing dynamixel_sdk_custom_interfaces.egg-info/PKG-INFO\n'}
+[1.728727] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'writing dependency_links to dynamixel_sdk_custom_interfaces.egg-info/dependency_links.txt\n'}
+[1.730482] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'writing top-level names to dynamixel_sdk_custom_interfaces.egg-info/top_level.txt\n'}
+[1.805202] (-) TimerEvent: {}
+[1.903581] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b"reading manifest file 'dynamixel_sdk_custom_interfaces.egg-info/SOURCES.txt'\n"}
+[1.905453] (-) TimerEvent: {}
+[1.910050] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b"writing manifest file 'dynamixel_sdk_custom_interfaces.egg-info/SOURCES.txt'\n"}
+[2.006733] (-) TimerEvent: {}
+[2.038714] (dynamixel_sdk) CommandEnded: {'returncode': 0}
+[2.078720] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_dynamixel_sdk_custom_interfaces_egg\n'}
+[2.106958] (-) TimerEvent: {}
+[2.149017] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[2.207242] (-) TimerEvent: {}
+[2.308647] (-) TimerEvent: {}
+[2.346098] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'install'}
+[2.400185] (dynamixel_sdk) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/lemmy/robotis_ws/build/dynamixel_sdk'], 'cwd': '/home/lemmy/robotis_ws/build/dynamixel_sdk', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lemmy'), ('SSH_CLIENT', '192.168.1.134 58701 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/lemmy/robotis_ws/install/joystick_listener/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk/lib:/home/lemmy/ros2_ws/install/dynamixel_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/lemmy'), ('OLDPWD', '/home/lemmy'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/lemmy/robotis_ws/install:/home/lemmy/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'lemmy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/my_robot_controller:/home/lemmy/ros2_ws/install/dynamixel_hardware:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/lemmy/robotis_ws/build/dynamixel_sdk'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.134 58701 192.168.1.91 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages:/home/lemmy/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/dynamixel_hardware:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble')]), 'shell': False}
+[2.409510] (-) TimerEvent: {}
+[2.435401] (dynamixel_sdk) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.436100] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include/\n'}
+[2.437137] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk\n'}
+[2.438740] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler.h\n'}
+[2.439309] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/dynamixel_sdk.h\n'}
+[2.439766] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol2_packet_handler.h\n'}
+[2.440078] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_mac.h\n'}
+[2.440386] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_linux.h\n'}
+[2.440832] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol1_packet_handler.h\n'}
+[2.441834] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_windows.h\n'}
+[2.442362] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_read.h\n'}
+[2.444367] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_write.h\n'}
+[2.445445] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_read.h\n'}
+[2.446777] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/packet_handler.h\n'}
+[2.448781] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_write.h\n'}
+[2.449513] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_arduino.h\n'}
+[2.451775] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/lib/libdynamixel_sdk.so\n'}
+[2.452409] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.sh\n'}
+[2.454141] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.dsv\n'}
+[2.455371] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk\n'}
+[2.459840] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk\n'}
+[2.460601] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.sh\n'}
+[2.469755] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.dsv\n'}
+[2.470402] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.sh\n'}
+[2.470834] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.dsv\n'}
+[2.471205] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.bash\n'}
+[2.471651] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.sh\n'}
+[2.472104] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.zsh\n'}
+[2.472633] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.dsv\n'}
+[2.473122] (dynamixel_sdk) StdoutLine: {'line': b'-- Installing: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.dsv\n'}
+[2.473523] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/ament_index/resource_index/packages/dynamixel_sdk\n'}
+[2.473995] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.474433] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.474922] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig.cmake\n'}
+[2.475428] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig-version.cmake\n'}
+[2.475801] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.xml\n'}
+[2.476115] (dynamixel_sdk) CommandEnded: {'returncode': 0}
+[2.509731] (-) TimerEvent: {}
+[2.610992] (-) TimerEvent: {}
+[2.712650] (-) TimerEvent: {}
+[2.814267] (-) TimerEvent: {}
+[2.893605] (dynamixel_sdk) JobEnded: {'identifier': 'dynamixel_sdk', 'rc': 0}
+[2.914217] (-) TimerEvent: {}
+[3.014803] (-) TimerEvent: {}
+[3.115562] (-) TimerEvent: {}
+[3.216792] (-) TimerEvent: {}
+[3.317658] (-) TimerEvent: {}
+[3.329879] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'install'}
+[3.330947] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/lemmy/robotis_ws/build/dynamixel_sdk_custom_interfaces'], 'cwd': '/home/lemmy/robotis_ws/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lemmy'), ('SSH_CLIENT', '192.168.1.134 58701 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/lemmy/robotis_ws/install/joystick_listener/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk/lib:/home/lemmy/ros2_ws/install/dynamixel_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/lemmy'), ('OLDPWD', '/home/lemmy'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/lemmy/robotis_ws/install:/home/lemmy/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'lemmy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/my_robot_controller:/home/lemmy/ros2_ws/install/dynamixel_hardware:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/lemmy/robotis_ws/build/dynamixel_sdk_custom_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.134 58701 192.168.1.91 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages:/home/lemmy/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/dynamixel_hardware:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble')]), 'shell': False}
+[3.375725] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.376955] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/dynamixel_sdk_custom_interfaces\n'}
+[3.377700] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces\n'}
+[3.378294] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv\n'}
+[3.379587] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/get_position.h\n'}
+[3.380017] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/get_velocity.h\n'}
+[3.380361] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail\n'}
+[3.381027] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_velocity__functions.c\n'}
+[3.382273] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.h\n'}
+[3.383107] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_velocity__functions.h\n'}
+[3.383514] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_velocity__struct.h\n'}
+[3.383975] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.c\n'}
+[3.384526] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.h\n'}
+[3.385121] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_velocity__type_support.h\n'}
+[3.385667] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.h\n'}
+[3.386217] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg\n'}
+[3.386796] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/present_load.h\n'}
+[3.387226] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/set_velocity.h\n'}
+[3.389267] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/moving_status.h\n'}
+[3.390749] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/status.h\n'}
+[3.391388] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/set_position.h\n'}
+[3.391928] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail\n'}
+[3.392393] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/moving_status__type_support.h\n'}
+[3.392864] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.h\n'}
+[3.393466] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/present_load__functions.h\n'}
+[3.393958] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/present_load__struct.h\n'}
+[3.394388] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/present_load__type_support.h\n'}
+[3.395734] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_velocity__functions.c\n'}
+[3.396993] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/moving_status__struct.h\n'}
+[3.397532] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/status__functions.h\n'}
+[3.398013] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_velocity__struct.h\n'}
+[3.398402] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_velocity__type_support.h\n'}
+[3.398713] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.h\n'}
+[3.399044] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/present_load__functions.c\n'}
+[3.399514] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/moving_status__functions.c\n'}
+[3.399991] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/status__type_support.h\n'}
+[3.400877] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.h\n'}
+[3.401661] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/moving_status__functions.h\n'}
+[3.402172] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/status__functions.c\n'}
+[3.402694] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.c\n'}
+[3.403044] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_velocity__functions.h\n'}
+[3.403565] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/status__struct.h\n'}
+[3.404100] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.404552] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.sh\n'}
+[3.405133] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.dsv\n'}
+[3.405562] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so\n'}
+[3.405911] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces\n'}
+[3.406316] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv\n'}
+[3.406752] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail\n'}
+[3.407454] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_velocity__rosidl_typesupport_fastrtps_c.h\n'}
+[3.407914] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_c.h\n'}
+[3.408406] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg\n'}
+[3.409072] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.409625] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail\n'}
+[3.410203] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_c.h\n'}
+[3.410535] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/moving_status__rosidl_typesupport_fastrtps_c.h\n'}
+[3.411017] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_velocity__rosidl_typesupport_fastrtps_c.h\n'}
+[3.411433] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/present_load__rosidl_typesupport_fastrtps_c.h\n'}
+[3.412051] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/status__rosidl_typesupport_fastrtps_c.h\n'}
+[3.412512] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[3.412961] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces\n'}
+[3.413610] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv\n'}
+[3.414144] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/get_velocity.hpp\n'}
+[3.414610] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/get_position.hpp\n'}
+[3.415424] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail\n'}
+[3.416150] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__builder.hpp\n'}
+[3.417023] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_velocity__traits.hpp\n'}
+[3.417646] (-) TimerEvent: {}
+[3.418638] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_velocity__builder.hpp\n'}
+[3.419339] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_velocity__struct.hpp\n'}
+[3.419905] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.hpp\n'}
+[3.420336] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__traits.hpp\n'}
+[3.420857] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg\n'}
+[3.421397] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/status.hpp\n'}
+[3.421916] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/set_velocity.hpp\n'}
+[3.422442] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/moving_status.hpp\n'}
+[3.422901] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/present_load.hpp\n'}
+[3.423431] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/set_position.hpp\n'}
+[3.423811] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail\n'}
+[3.424341] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_velocity__traits.hpp\n'}
+[3.424818] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/present_load__builder.hpp\n'}
+[3.425349] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_velocity__builder.hpp\n'}
+[3.426119] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/status__builder.hpp\n'}
+[3.426689] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_velocity__struct.hpp\n'}
+[3.427522] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__builder.hpp\n'}
+[3.428142] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/status__traits.hpp\n'}
+[3.428630] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp\n'}
+[3.429154] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/status__struct.hpp\n'}
+[3.429633] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/present_load__struct.hpp\n'}
+[3.429968] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/moving_status__traits.hpp\n'}
+[3.430316] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__traits.hpp\n'}
+[3.430910] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/moving_status__struct.hpp\n'}
+[3.431234] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/present_load__traits.hpp\n'}
+[3.431539] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/moving_status__builder.hpp\n'}
+[3.431870] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces\n'}
+[3.432394] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv\n'}
+[3.432862] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail\n'}
+[3.433324] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_velocity__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.433906] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/dds_fastrtps\n'}
+[3.434424] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.434823] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg\n'}
+[3.435611] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[3.436257] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail\n'}
+[3.437034] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/present_load__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.437747] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.438454] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/moving_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.438970] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_velocity__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.439725] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/dds_fastrtps\n'}
+[3.440505] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.441035] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.441550] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces\n'}
+[3.441981] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv\n'}
+[3.442464] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail\n'}
+[3.443058] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_velocity__rosidl_typesupport_introspection_c.h\n'}
+[3.443405] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_velocity__type_support.c\n'}
+[3.443772] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_c.h\n'}
+[3.444106] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.c\n'}
+[3.444519] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg\n'}
+[3.445307] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail\n'}
+[3.445780] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/moving_status__type_support.c\n'}
+[3.446177] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/status__type_support.c\n'}
+[3.446911] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_velocity__type_support.c\n'}
+[3.447411] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/status__rosidl_typesupport_introspection_c.h\n'}
+[3.448092] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h\n'}
+[3.448947] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/moving_status__rosidl_typesupport_introspection_c.h\n'}
+[3.450026] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/present_load__rosidl_typesupport_introspection_c.h\n'}
+[3.450708] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/present_load__type_support.c\n'}
+[3.451641] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.c\n'}
+[3.452552] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_velocity__rosidl_typesupport_introspection_c.h\n'}
+[3.453563] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.454456] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[3.455240] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so\n'}
+[3.455684] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces\n'}
+[3.456048] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv\n'}
+[3.456616] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail\n'}
+[3.457029] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.cpp\n'}
+[3.457455] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.457804] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_velocity__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.458190] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_velocity__type_support.cpp\n'}
+[3.458748] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg\n'}
+[3.459246] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail\n'}
+[3.459871] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/present_load__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.460436] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/status__type_support.cpp\n'}
+[3.460828] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/moving_status__type_support.cpp\n'}
+[3.461376] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.cpp\n'}
+[3.462117] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_velocity__type_support.cpp\n'}
+[3.463028] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_velocity__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.463670] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/moving_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.464178] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.464582] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.464919] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/msg/detail/present_load__type_support.cpp\n'}
+[3.465742] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[3.466173] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so\n'}
+[3.466524] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.sh\n'}
+[3.467226] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.dsv\n'}
+[3.467797] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces-3.7.60-py3.10.egg-info\n'}
+[3.468368] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces-3.7.60-py3.10.egg-info/SOURCES.txt\n'}
+[3.468788] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces-3.7.60-py3.10.egg-info/dependency_links.txt\n'}
+[3.469570] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces-3.7.60-py3.10.egg-info/PKG-INFO\n'}
+[3.470104] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces-3.7.60-py3.10.egg-info/top_level.txt\n'}
+[3.471207] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces\n'}
+[3.471792] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/__init__.py\n'}
+[3.472461] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[3.473284] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[3.474222] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[3.474984] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[3.475661] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/libdynamixel_sdk_custom_interfaces__rosidl_generator_py.so\n'}
+[3.476345] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/srv\n'}
+[3.477138] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/srv/__init__.py\n'}
+[3.477902] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/srv/_get_position_s.c\n'}
+[3.478800] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/srv/_get_position.py\n'}
+[3.479622] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/srv/_get_velocity.py\n'}
+[3.480802] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/srv/_get_velocity_s.c\n'}
+[3.481974] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[3.482601] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/msg\n'}
+[3.483289] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/msg/__init__.py\n'}
+[3.483831] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/msg/_present_load.py\n'}
+[3.484198] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_velocity_s.c\n'}
+[3.484514] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/msg/_moving_status_s.c\n'}
+[3.484865] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/msg/_status_s.c\n'}
+[3.485394] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_position.py\n'}
+[3.485890] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_position_s.c\n'}
+[3.486262] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/msg/_moving_status.py\n'}
+[3.486633] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_velocity.py\n'}
+[3.487091] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/msg/_present_load_s.c\n'}
+[3.487435] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/msg/_status.py\n'}
+[3.487743] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[3.517931] (-) TimerEvent: {}
+[3.619134] (-) TimerEvent: {}
+[3.666273] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b"Listing '/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces'...\n"}
+[3.667611] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b"Listing '/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/msg'...\n"}
+[3.668763] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b"Listing '/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/srv'...\n"}
+[3.694074] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[3.696552] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[3.700238] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[3.702651] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_py.so\n'}
+[3.704733] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetVelocity.idl\n'}
+[3.705475] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.idl\n'}
+[3.706080] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/MovingStatus.idl\n'}
+[3.706592] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/PresentLoad.idl\n'}
+[3.707107] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetVelocity.idl\n'}
+[3.707626] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl\n'}
+[3.708309] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetVelocity.msg\n'}
+[3.708932] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg\n'}
+[3.709516] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/MovingStatus.msg\n'}
+[3.710057] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/PresentLoad.msg\n'}
+[3.710575] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetVelocity.srv\n'}
+[3.711097] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetVelocity_Request.msg\n'}
+[3.711625] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetVelocity_Response.msg\n'}
+[3.712231] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv\n'}
+[3.712765] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Request.msg\n'}
+[3.713373] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Response.msg\n'}
+[3.713883] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_custom_interfaces\n'}
+[3.714443] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_custom_interfaces\n'}
+[3.714922] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.sh\n'}
+[3.716320] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.dsv\n'}
+[3.717888] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.sh\n'}
+[3.718527] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.dsv\n'}
+[3.719050] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.bash\n'}
+[3.719548] (-) TimerEvent: {}
+[3.720045] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.sh\n'}
+[3.720532] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.zsh\n'}
+[3.720921] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.dsv\n'}
+[3.721584] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.dsv\n'}
+[3.721958] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/packages/dynamixel_sdk_custom_interfaces\n'}
+[3.722484] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_generator_cExport.cmake\n'}
+[3.723371] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[3.724451] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[3.725131] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[3.726242] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_generator_cppExport.cmake\n'}
+[3.727625] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[3.728295] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[3.729992] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.730643] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[3.732129] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[3.733673] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[3.734202] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.734741] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[3.735824] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[3.736395] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[3.737532] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_generator_pyExport.cmake\n'}
+[3.738192] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/export_dynamixel_sdk_custom_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[3.738758] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[3.739312] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.740402] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.741406] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.742739] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.743452] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.744032] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.744462] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig.cmake\n'}
+[3.744975] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig-version.cmake\n'}
+[3.745465] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.xml\n'}
+[3.752359] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[3.819770] (-) TimerEvent: {}
+[3.920506] (-) TimerEvent: {}
+[4.021653] (-) TimerEvent: {}
+[4.089312] (wheels_control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/wheels_control', 'build', '--build-base', '/home/lemmy/robotis_ws/build/wheels_control/build', 'install', '--record', '/home/lemmy/robotis_ws/build/wheels_control/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/lemmy/robotis_ws/src/wheels_control', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'lemmy', 'SSH_CLIENT': '192.168.1.134 58701 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/lemmy/robotis_ws/install/joystick_listener/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk/lib:/home/lemmy/ros2_ws/install/dynamixel_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/lemmy', 'OLDPWD': '/home/lemmy', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/lemmy/robotis_ws/install:/home/lemmy/ros2_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'lemmy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/my_robot_controller:/home/lemmy/ros2_ws/install/dynamixel_hardware:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/lemmy/robotis_ws/build/wheels_control', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.1.134 58701 192.168.1.91 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/lemmy/robotis_ws/build/wheels_control/prefix_override:/home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages:/home/lemmy/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/dynamixel_hardware'}, 'shell': False}
+[4.121784] (-) TimerEvent: {}
+[4.222497] (-) TimerEvent: {}
+[4.323159] (-) TimerEvent: {}
+[4.423819] (-) TimerEvent: {}
+[4.524468] (-) TimerEvent: {}
+[4.625173] (-) TimerEvent: {}
+[4.725884] (-) TimerEvent: {}
+[4.826637] (-) TimerEvent: {}
+[4.927543] (-) TimerEvent: {}
+[4.931864] (dynamixel_sdk_custom_interfaces) JobEnded: {'identifier': 'dynamixel_sdk_custom_interfaces', 'rc': 0}
+[4.936166] (dynamixel_sdk_examples) JobStarted: {'identifier': 'dynamixel_sdk_examples'}
+[4.961206] (joystick_listener) JobStarted: {'identifier': 'joystick_listener'}
+[4.998743] (dynamixel_sdk_examples) JobProgress: {'identifier': 'dynamixel_sdk_examples', 'progress': 'cmake'}
+[5.002417] (dynamixel_sdk_examples) JobProgress: {'identifier': 'dynamixel_sdk_examples', 'progress': 'build'}
+[5.003704] (dynamixel_sdk_examples) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lemmy/robotis_ws/build/dynamixel_sdk_examples', '--', '-j4', '-l4'], 'cwd': '/home/lemmy/robotis_ws/build/dynamixel_sdk_examples', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lemmy'), ('SSH_CLIENT', '192.168.1.134 58701 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk/lib:/home/lemmy/robotis_ws/install/joystick_listener/lib:/home/lemmy/ros2_ws/install/dynamixel_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/lemmy'), ('OLDPWD', '/home/lemmy'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/lemmy/robotis_ws/install:/home/lemmy/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'lemmy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/my_robot_controller:/home/lemmy/ros2_ws/install/dynamixel_hardware:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/lemmy/robotis_ws/build/dynamixel_sdk_examples'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.134 58701 192.168.1.91 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages:/home/lemmy/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/dynamixel_hardware:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble')]), 'shell': False}
+[5.020741] (joystick_listener) JobProgress: {'identifier': 'joystick_listener', 'progress': 'cmake'}
+[5.024014] (joystick_listener) JobProgress: {'identifier': 'joystick_listener', 'progress': 'build'}
+[5.026494] (joystick_listener) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lemmy/robotis_ws/build/joystick_listener', '--', '-j4', '-l4'], 'cwd': '/home/lemmy/robotis_ws/build/joystick_listener', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lemmy'), ('SSH_CLIENT', '192.168.1.134 58701 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/lemmy/robotis_ws/install/joystick_listener/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk/lib:/home/lemmy/ros2_ws/install/dynamixel_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/lemmy'), ('OLDPWD', '/home/lemmy'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/lemmy/robotis_ws/install:/home/lemmy/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'lemmy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/my_robot_controller:/home/lemmy/ros2_ws/install/dynamixel_hardware:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/lemmy/robotis_ws/build/joystick_listener'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.134 58701 192.168.1.91 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages:/home/lemmy/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/dynamixel_hardware:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble')]), 'shell': False}
+[5.029343] (-) TimerEvent: {}
+[5.136548] (-) TimerEvent: {}
+[5.237392] (-) TimerEvent: {}
+[5.268142] (dynamixel_sdk_examples) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target position_control_node\x1b[0m\n'}
+[5.330949] (dynamixel_sdk_examples) StdoutLine: {'line': b'[ 50%] Built target velocity_control_node\n'}
+[5.337580] (-) TimerEvent: {}
+[5.376788] (joystick_listener) StdoutLine: {'line': b'[  9%] Built target joystick_listener__rosidl_generator_c\n'}
+[5.405072] (joystick_listener) StdoutLine: {'line': b'[ 12%] Built target joystick_listener__cpp\n'}
+[5.414711] (dynamixel_sdk_examples) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/position_control_node.dir/src/position_control_node.cpp.o\x1b[0m\n'}
+[5.427719] (joystick_listener) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_joystick_listener\n'}
+[5.437776] (-) TimerEvent: {}
+[5.539500] (-) TimerEvent: {}
+[5.575024] (joystick_listener) StdoutLine: {'line': b'[ 22%] Built target joystick_listener__rosidl_typesupport_fastrtps_c\n'}
+[5.585008] (joystick_listener) StdoutLine: {'line': b'[ 32%] Built target joystick_listener__rosidl_typesupport_introspection_c\n'}
+[5.607277] (wheels_control) StdoutLine: {'line': b'running egg_info\n'}
+[5.611446] (wheels_control) StdoutLine: {'line': b'writing ../../build/wheels_control/wheels_control.egg-info/PKG-INFO\n'}
+[5.614222] (wheels_control) StdoutLine: {'line': b'writing dependency_links to ../../build/wheels_control/wheels_control.egg-info/dependency_links.txt\n'}
+[5.615526] (wheels_control) StdoutLine: {'line': b'writing entry points to ../../build/wheels_control/wheels_control.egg-info/entry_points.txt\n'}
+[5.616628] (wheels_control) StdoutLine: {'line': b'writing requirements to ../../build/wheels_control/wheels_control.egg-info/requires.txt\n'}
+[5.617774] (wheels_control) StdoutLine: {'line': b'writing top-level names to ../../build/wheels_control/wheels_control.egg-info/top_level.txt\n'}
+[5.621859] (joystick_listener) StdoutLine: {'line': b'[ 41%] Built target joystick_listener__rosidl_typesupport_c\n'}
+[5.627908] (wheels_control) StdoutLine: {'line': b"reading manifest file '../../build/wheels_control/wheels_control.egg-info/SOURCES.txt'\n"}
+[5.629783] (wheels_control) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[5.633301] (wheels_control) StdoutLine: {'line': b"writing manifest file '../../build/wheels_control/wheels_control.egg-info/SOURCES.txt'\n"}
+[5.634653] (wheels_control) StdoutLine: {'line': b'running build\n'}
+[5.635632] (wheels_control) StdoutLine: {'line': b'running build_py\n'}
+[5.637394] (wheels_control) StdoutLine: {'line': b'running install\n'}
+[5.638521] (wheels_control) StdoutLine: {'line': b'running install_lib\n'}
+[5.639683] (-) TimerEvent: {}
+[5.645893] (wheels_control) StdoutLine: {'line': b'running install_data\n'}
+[5.647092] (wheels_control) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.650915] (joystick_listener) StdoutLine: {'line': b'[ 51%] Built target joystick_listener__rosidl_typesupport_introspection_cpp\n'}
+[5.656639] (wheels_control) StdoutLine: {'line': b"removing '/home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages/wheels_control-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[5.659276] (wheels_control) StdoutLine: {'line': b'Copying ../../build/wheels_control/wheels_control.egg-info to /home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages/wheels_control-0.0.0-py3.10.egg-info\n'}
+[5.667338] (wheels_control) StdoutLine: {'line': b'running install_scripts\n'}
+[5.739913] (-) TimerEvent: {}
+[5.775909] (wheels_control) StdoutLine: {'line': b'Installing wheels_control script to /home/lemmy/robotis_ws/install/wheels_control/lib/wheels_control\n'}
+[5.779231] (wheels_control) StdoutLine: {'line': b"writing list of installed files to '/home/lemmy/robotis_ws/build/wheels_control/install.log'\n"}
+[5.804338] (joystick_listener) StdoutLine: {'line': b'[ 61%] Built target joystick_listener__rosidl_typesupport_cpp\n'}
+[5.840328] (-) TimerEvent: {}
+[5.860598] (joystick_listener) StdoutLine: {'line': b'[ 70%] Built target joystick_listener__rosidl_typesupport_fastrtps_cpp\n'}
+[5.940954] (-) TimerEvent: {}
+[5.958257] (wheels_control) CommandEnded: {'returncode': 0}
+[5.987488] (wheels_control) JobEnded: {'identifier': 'wheels_control', 'rc': 0}
+[5.994411] (joystick_listener) StdoutLine: {'line': b'[ 70%] Built target joystick_listener\n'}
+[6.041188] (-) TimerEvent: {}
+[6.095203] (joystick_listener) StdoutLine: {'line': b'[ 74%] Built target joystick_listener__py\n'}
+[6.141377] (-) TimerEvent: {}
+[6.203659] (joystick_listener) StdoutLine: {'line': b'[ 80%] Built target joystick_listener__rosidl_generator_py\n'}
+[6.241561] (-) TimerEvent: {}
+[6.342367] (-) TimerEvent: {}
+[6.350990] (joystick_listener) StdoutLine: {'line': b'[ 87%] Built target joystick_listener__rosidl_typesupport_fastrtps_c__pyext\n'}
+[6.372635] (joystick_listener) StdoutLine: {'line': b'[ 93%] Built target joystick_listener__rosidl_typesupport_introspection_c__pyext\n'}
+[6.387829] (joystick_listener) StdoutLine: {'line': b'[100%] Built target joystick_listener__rosidl_typesupport_c__pyext\n'}
+[6.442541] (-) TimerEvent: {}
+[6.543239] (-) TimerEvent: {}
+[6.595985] (joystick_listener) StdoutLine: {'line': b'running egg_info\n'}
+[6.638807] (joystick_listener) StdoutLine: {'line': b'writing joystick_listener.egg-info/PKG-INFO\n'}
+[6.640932] (joystick_listener) StdoutLine: {'line': b'writing dependency_links to joystick_listener.egg-info/dependency_links.txt\n'}
+[6.642466] (joystick_listener) StdoutLine: {'line': b'writing top-level names to joystick_listener.egg-info/top_level.txt\n'}
+[6.643364] (-) TimerEvent: {}
+[6.743973] (-) TimerEvent: {}
+[6.761482] (joystick_listener) StdoutLine: {'line': b"reading manifest file 'joystick_listener.egg-info/SOURCES.txt'\n"}
+[6.764366] (joystick_listener) StdoutLine: {'line': b"writing manifest file 'joystick_listener.egg-info/SOURCES.txt'\n"}
+[6.844264] (-) TimerEvent: {}
+[6.897063] (joystick_listener) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_joystick_listener_egg\n'}
+[6.943250] (joystick_listener) CommandEnded: {'returncode': 0}
+[6.944761] (-) TimerEvent: {}
+[7.046156] (-) TimerEvent: {}
+[7.146819] (-) TimerEvent: {}
+[7.247573] (-) TimerEvent: {}
+[7.302293] (joystick_listener) JobProgress: {'identifier': 'joystick_listener', 'progress': 'install'}
+[7.303452] (joystick_listener) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/lemmy/robotis_ws/build/joystick_listener'], 'cwd': '/home/lemmy/robotis_ws/build/joystick_listener', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lemmy'), ('SSH_CLIENT', '192.168.1.134 58701 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/lemmy/robotis_ws/install/joystick_listener/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk/lib:/home/lemmy/ros2_ws/install/dynamixel_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/lemmy'), ('OLDPWD', '/home/lemmy'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/lemmy/robotis_ws/install:/home/lemmy/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'lemmy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/my_robot_controller:/home/lemmy/ros2_ws/install/dynamixel_hardware:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/lemmy/robotis_ws/build/joystick_listener'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.134 58701 192.168.1.91 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages:/home/lemmy/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/dynamixel_hardware:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble')]), 'shell': False}
+[7.343001] (joystick_listener) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.343976] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/ament_index/resource_index/rosidl_interfaces/joystick_listener\n'}
+[7.344740] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener\n'}
+[7.345745] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg\n'}
+[7.346563] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/joystick_command.h\n'}
+[7.347264] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail\n'}
+[7.347825] (-) TimerEvent: {}
+[7.348467] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__type_support.h\n'}
+[7.349061] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__functions.h\n'}
+[7.349607] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__functions.c\n'}
+[7.350266] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__struct.h\n'}
+[7.350707] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/rosidl_generator_c__visibility_control.h\n'}
+[7.351291] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/environment/library_path.sh\n'}
+[7.351907] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/environment/library_path.dsv\n'}
+[7.352644] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_generator_c.so\n'}
+[7.353333] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener\n'}
+[7.353776] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg\n'}
+[7.354253] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[7.354923] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail\n'}
+[7.355314] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__rosidl_typesupport_fastrtps_c.h\n'}
+[7.355849] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_fastrtps_c.so\n'}
+[7.356618] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener\n'}
+[7.357476] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg\n'}
+[7.358154] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/joystick_command.hpp\n'}
+[7.358856] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail\n'}
+[7.359554] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__builder.hpp\n'}
+[7.360106] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__traits.hpp\n'}
+[7.360785] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__struct.hpp\n'}
+[7.361366] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener\n'}
+[7.362089] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg\n'}
+[7.362556] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[7.363251] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail\n'}
+[7.363850] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/dds_fastrtps\n'}
+[7.364362] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.365047] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_fastrtps_cpp.so\n'}
+[7.365819] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener\n'}
+[7.366573] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg\n'}
+[7.367319] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail\n'}
+[7.368044] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__type_support.c\n'}
+[7.368587] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__rosidl_typesupport_introspection_c.h\n'}
+[7.369159] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[7.369796] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_introspection_c.so\n'}
+[7.371422] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_c.so\n'}
+[7.372688] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener\n'}
+[7.373595] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg\n'}
+[7.374399] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail\n'}
+[7.375213] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__type_support.cpp\n'}
+[7.375663] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.376330] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_introspection_cpp.so\n'}
+[7.378624] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_cpp.so\n'}
+[7.379936] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/environment/pythonpath.sh\n'}
+[7.380634] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/environment/pythonpath.dsv\n'}
+[7.381530] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener-0.0.0-py3.10.egg-info\n'}
+[7.382187] (joystick_listener) StdoutLine: {'line': b'-- Installing: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[7.383141] (joystick_listener) StdoutLine: {'line': b'-- Installing: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[7.384627] (joystick_listener) StdoutLine: {'line': b'-- Installing: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[7.386111] (joystick_listener) StdoutLine: {'line': b'-- Installing: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[7.387672] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener\n'}
+[7.388382] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener/__init__.py\n'}
+[7.389216] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener/libjoystick_listener__rosidl_generator_py.so\n'}
+[7.389979] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener/joystick_listener_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[7.390697] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener/_joystick_listener_s.ep.rosidl_typesupport_c.c\n'}
+[7.391331] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener/_joystick_listener_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[7.391983] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener/_joystick_listener_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[7.392691] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener/joystick_listener_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[7.393470] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener/msg\n'}
+[7.394014] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener/msg/__init__.py\n'}
+[7.394534] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener/msg/_joystick_command_s.c\n'}
+[7.394945] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener/msg/_joystick_command.py\n'}
+[7.395283] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener/joystick_listener_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[7.448028] (-) TimerEvent: {}
+[7.548814] (-) TimerEvent: {}
+[7.568132] (joystick_listener) StdoutLine: {'line': b"Listing '/home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener'...\n"}
+[7.569797] (joystick_listener) StdoutLine: {'line': b"Listing '/home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener/msg'...\n"}
+[7.595987] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener/joystick_listener_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[7.598560] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener/joystick_listener_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[7.601014] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages/joystick_listener/joystick_listener_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[7.603479] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_generator_py.so\n'}
+[7.604879] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/msg/JoystickCommand.idl\n'}
+[7.605848] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/msg/JoystickCommand.msg\n'}
+[7.606636] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/lib/joystick_listener/joystick_control.py\n'}
+[7.607386] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/launch\n'}
+[7.608096] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/launch/joystick_listener.launch.py\n'}
+[7.608765] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/ament_index/resource_index/package_run_dependencies/joystick_listener\n'}
+[7.609495] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/ament_index/resource_index/parent_prefix_path/joystick_listener\n'}
+[7.610149] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/environment/ament_prefix_path.sh\n'}
+[7.610794] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/environment/ament_prefix_path.dsv\n'}
+[7.611417] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/environment/path.sh\n'}
+[7.611985] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/environment/path.dsv\n'}
+[7.612402] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/local_setup.bash\n'}
+[7.612830] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/local_setup.sh\n'}
+[7.613581] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/local_setup.zsh\n'}
+[7.614016] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/local_setup.dsv\n'}
+[7.614696] (joystick_listener) StdoutLine: {'line': b'-- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/package.dsv\n'}
+[7.615163] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/ament_index/resource_index/packages/joystick_listener\n'}
+[7.615732] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_generator_cExport.cmake\n'}
+[7.616316] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_generator_cExport-noconfig.cmake\n'}
+[7.616782] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[7.617451] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[7.617881] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_generator_cppExport.cmake\n'}
+[7.618457] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[7.619001] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[7.619676] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listener__rosidl_typesupport_introspection_cExport.cmake\n'}
+[7.620285] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listener__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[7.621251] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listener__rosidl_typesupport_cExport.cmake\n'}
+[7.621976] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listener__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[7.622677] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listener__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[7.623392] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listener__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[7.624286] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listener__rosidl_typesupport_cppExport.cmake\n'}
+[7.625178] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listener__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[7.625882] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_generator_pyExport.cmake\n'}
+[7.626559] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_generator_pyExport-noconfig.cmake\n'}
+[7.627409] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/rosidl_cmake-extras.cmake\n'}
+[7.628355] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[7.629342] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[7.630123] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[7.630957] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[7.631805] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[7.632344] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[7.632934] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listenerConfig.cmake\n'}
+[7.633636] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listenerConfig-version.cmake\n'}
+[7.634193] (joystick_listener) StdoutLine: {'line': b'-- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/package.xml\n'}
+[7.639243] (joystick_listener) CommandEnded: {'returncode': 0}
+[7.649037] (-) TimerEvent: {}
+[7.749912] (-) TimerEvent: {}
+[7.851121] (-) TimerEvent: {}
+[7.951847] (-) TimerEvent: {}
+[8.052611] (-) TimerEvent: {}
+[8.128880] (joystick_listener) JobEnded: {'identifier': 'joystick_listener', 'rc': 0}
+[8.152877] (-) TimerEvent: {}
+[8.253638] (-) TimerEvent: {}
+[8.354424] (-) TimerEvent: {}
+[8.455248] (-) TimerEvent: {}
+[8.556004] (-) TimerEvent: {}
+[8.656780] (-) TimerEvent: {}
+[8.757565] (-) TimerEvent: {}
+[8.858390] (-) TimerEvent: {}
+[8.959224] (-) TimerEvent: {}
+[9.059922] (-) TimerEvent: {}
+[9.160880] (-) TimerEvent: {}
+[9.261642] (-) TimerEvent: {}
+[9.362386] (-) TimerEvent: {}
+[9.463083] (-) TimerEvent: {}
+[9.563786] (-) TimerEvent: {}
+[9.664509] (-) TimerEvent: {}
+[9.765308] (-) TimerEvent: {}
+[9.866010] (-) TimerEvent: {}
+[9.966786] (-) TimerEvent: {}
+[10.067528] (-) TimerEvent: {}
+[10.168310] (-) TimerEvent: {}
+[10.269219] (-) TimerEvent: {}
+[10.369976] (-) TimerEvent: {}
+[10.470685] (-) TimerEvent: {}
+[10.571508] (-) TimerEvent: {}
+[10.672300] (-) TimerEvent: {}
+[10.773033] (-) TimerEvent: {}
+[10.874139] (-) TimerEvent: {}
+[10.974955] (-) TimerEvent: {}
+[11.075730] (-) TimerEvent: {}
+[11.176454] (-) TimerEvent: {}
+[11.277246] (-) TimerEvent: {}
+[11.377971] (-) TimerEvent: {}
+[11.478672] (-) TimerEvent: {}
+[11.579498] (-) TimerEvent: {}
+[11.680241] (-) TimerEvent: {}
+[11.781015] (-) TimerEvent: {}
+[11.881833] (-) TimerEvent: {}
+[11.982571] (-) TimerEvent: {}
+[12.083365] (-) TimerEvent: {}
+[12.184129] (-) TimerEvent: {}
+[12.284881] (-) TimerEvent: {}
+[12.385736] (-) TimerEvent: {}
+[12.486468] (-) TimerEvent: {}
+[12.587244] (-) TimerEvent: {}
+[12.687966] (-) TimerEvent: {}
+[12.788690] (-) TimerEvent: {}
+[12.889452] (-) TimerEvent: {}
+[12.990182] (-) TimerEvent: {}
+[13.090913] (-) TimerEvent: {}
+[13.191638] (-) TimerEvent: {}
+[13.292374] (-) TimerEvent: {}
+[13.393132] (-) TimerEvent: {}
+[13.493881] (-) TimerEvent: {}
+[13.594599] (-) TimerEvent: {}
+[13.695418] (-) TimerEvent: {}
+[13.796176] (-) TimerEvent: {}
+[13.896879] (-) TimerEvent: {}
+[13.997653] (-) TimerEvent: {}
+[14.098424] (-) TimerEvent: {}
+[14.199162] (-) TimerEvent: {}
+[14.299951] (-) TimerEvent: {}
+[14.400750] (-) TimerEvent: {}
+[14.501539] (-) TimerEvent: {}
+[14.602331] (-) TimerEvent: {}
+[14.703042] (-) TimerEvent: {}
+[14.803855] (-) TimerEvent: {}
+[14.904657] (-) TimerEvent: {}
+[15.005499] (-) TimerEvent: {}
+[15.106216] (-) TimerEvent: {}
+[15.207026] (-) TimerEvent: {}
+[15.307802] (-) TimerEvent: {}
+[15.408519] (-) TimerEvent: {}
+[15.509244] (-) TimerEvent: {}
+[15.610400] (-) TimerEvent: {}
+[15.711195] (-) TimerEvent: {}
+[15.812013] (-) TimerEvent: {}
+[15.913000] (-) TimerEvent: {}
+[16.013763] (-) TimerEvent: {}
+[16.114484] (-) TimerEvent: {}
+[16.144036] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid PositionControlNode::handle_position(dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[16.145011] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:157:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_ids_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<unsigned char>\x1b[m\x1b[K\xe2\x80\x99} to \xe2\x80\x98\x1b[01m\x1b[Kconst std::vector<int, std::allocator<int> >&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[16.145530] (dynamixel_sdk_examples) StderrLine: {'line': b'  157 |     publishMovingStatus(\x1b[01;31m\x1b[Kmsg->ids\x1b[m\x1b[K, moving_statuses);\n'}
+[16.145901] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K~~~~~^~~\x1b[m\x1b[K\n'}
+[16.146271] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[16.146738] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_ids_type {aka std::vector<unsigned char>}\x1b[m\x1b[K\n'}
+[16.147197] (dynamixel_sdk_examples) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:13\x1b[m\x1b[K:\n'}
+[16.147552] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/include/position_control_node.hpp:45:56:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 1 of \xe2\x80\x98\x1b[01m\x1b[Kvoid PositionControlNode::publishMovingStatus(const std::vector<int, std::allocator<int> >&, const std::vector<unsigned char>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[16.147901] (dynamixel_sdk_examples) StderrLine: {'line': b'   45 |   void publishMovingStatus(\x1b[01;36m\x1b[Kconst std::vector<int32_t>& ids\x1b[m\x1b[K, const std::vector<uint8_t>& moving_statuses);\n'}
+[16.148239] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[16.148658] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:158:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_ids_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<unsigned char>\x1b[m\x1b[K\xe2\x80\x99} to \xe2\x80\x98\x1b[01m\x1b[Kconst std::vector<int, std::allocator<int> >&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[16.149012] (dynamixel_sdk_examples) StderrLine: {'line': b'  158 |     publishPresentLoad(\x1b[01;31m\x1b[Kmsg->ids\x1b[m\x1b[K, loads);\n'}
+[16.149516] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K~~~~~^~~\x1b[m\x1b[K\n'}
+[16.149873] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[16.150205] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_ids_type {aka std::vector<unsigned char>}\x1b[m\x1b[K\n'}
+[16.150612] (dynamixel_sdk_examples) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:13\x1b[m\x1b[K:\n'}
+[16.150977] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/include/position_control_node.hpp:46:55:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 1 of \xe2\x80\x98\x1b[01m\x1b[Kvoid PositionControlNode::publishPresentLoad(const std::vector<int, std::allocator<int> >&, const std::vector<int, std::allocator<int> >&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[16.151332] (dynamixel_sdk_examples) StderrLine: {'line': b'   46 |   void publishPresentLoad(\x1b[01;36m\x1b[Kconst std::vector<int32_t>& ids\x1b[m\x1b[K, const std::vector<int32_t>& loads);\n'}
+[16.151656] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[16.214681] (-) TimerEvent: {}
+[16.315405] (-) TimerEvent: {}
+[16.416143] (-) TimerEvent: {}
+[16.516870] (-) TimerEvent: {}
+[16.617612] (-) TimerEvent: {}
+[16.718335] (-) TimerEvent: {}
+[16.819088] (-) TimerEvent: {}
+[16.919827] (-) TimerEvent: {}
+[17.020586] (-) TimerEvent: {}
+[17.121329] (-) TimerEvent: {}
+[17.222042] (-) TimerEvent: {}
+[17.322744] (-) TimerEvent: {}
+[17.423470] (-) TimerEvent: {}
+[17.524240] (-) TimerEvent: {}
+[17.624986] (-) TimerEvent: {}
+[17.725742] (-) TimerEvent: {}
+[17.826465] (-) TimerEvent: {}
+[17.927190] (-) TimerEvent: {}
+[18.027883] (-) TimerEvent: {}
+[18.128624] (-) TimerEvent: {}
+[18.229372] (-) TimerEvent: {}
+[18.330094] (-) TimerEvent: {}
+[18.430807] (-) TimerEvent: {}
+[18.531516] (-) TimerEvent: {}
+[18.632268] (-) TimerEvent: {}
+[18.733036] (-) TimerEvent: {}
+[18.833892] (-) TimerEvent: {}
+[18.934614] (-) TimerEvent: {}
+[19.035377] (-) TimerEvent: {}
+[19.136165] (-) TimerEvent: {}
+[19.236940] (-) TimerEvent: {}
+[19.337715] (-) TimerEvent: {}
+[19.438439] (-) TimerEvent: {}
+[19.539175] (-) TimerEvent: {}
+[19.639906] (-) TimerEvent: {}
+[19.740648] (-) TimerEvent: {}
+[19.841407] (-) TimerEvent: {}
+[19.942194] (-) TimerEvent: {}
+[20.042956] (-) TimerEvent: {}
+[20.143720] (-) TimerEvent: {}
+[20.244456] (-) TimerEvent: {}
+[20.345273] (-) TimerEvent: {}
+[20.445992] (-) TimerEvent: {}
+[20.546743] (-) TimerEvent: {}
+[20.647527] (-) TimerEvent: {}
+[20.748264] (-) TimerEvent: {}
+[20.848979] (-) TimerEvent: {}
+[20.949950] (-) TimerEvent: {}
+[21.050780] (-) TimerEvent: {}
+[21.151726] (-) TimerEvent: {}
+[21.252490] (-) TimerEvent: {}
+[21.353312] (-) TimerEvent: {}
+[21.454037] (-) TimerEvent: {}
+[21.554754] (-) TimerEvent: {}
+[21.655504] (-) TimerEvent: {}
+[21.756261] (-) TimerEvent: {}
+[21.857058] (-) TimerEvent: {}
+[21.957893] (-) TimerEvent: {}
+[22.058692] (-) TimerEvent: {}
+[22.159551] (-) TimerEvent: {}
+[22.260326] (-) TimerEvent: {}
+[22.361061] (-) TimerEvent: {}
+[22.461889] (-) TimerEvent: {}
+[22.562665] (-) TimerEvent: {}
+[22.663405] (-) TimerEvent: {}
+[22.764163] (-) TimerEvent: {}
+[22.864914] (-) TimerEvent: {}
+[22.965733] (-) TimerEvent: {}
+[23.066457] (-) TimerEvent: {}
+[23.167201] (-) TimerEvent: {}
+[23.267932] (-) TimerEvent: {}
+[23.368781] (-) TimerEvent: {}
+[23.469842] (-) TimerEvent: {}
+[23.570571] (-) TimerEvent: {}
+[23.671341] (-) TimerEvent: {}
+[23.772070] (-) TimerEvent: {}
+[23.872800] (-) TimerEvent: {}
+[23.973592] (-) TimerEvent: {}
+[24.074313] (-) TimerEvent: {}
+[24.175062] (-) TimerEvent: {}
+[24.275793] (-) TimerEvent: {}
+[24.376517] (-) TimerEvent: {}
+[24.477251] (-) TimerEvent: {}
+[24.577999] (-) TimerEvent: {}
+[24.678832] (-) TimerEvent: {}
+[24.780013] (-) TimerEvent: {}
+[24.880714] (-) TimerEvent: {}
+[24.981479] (-) TimerEvent: {}
+[25.082138] (-) TimerEvent: {}
+[25.182827] (-) TimerEvent: {}
+[25.283630] (-) TimerEvent: {}
+[25.384364] (-) TimerEvent: {}
+[25.485240] (-) TimerEvent: {}
+[25.586100] (-) TimerEvent: {}
+[25.686877] (-) TimerEvent: {}
+[25.787661] (-) TimerEvent: {}
+[25.888437] (-) TimerEvent: {}
+[25.989513] (-) TimerEvent: {}
+[26.070925] (dynamixel_sdk_examples) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/position_control_node.dir/build.make:76: CMakeFiles/position_control_node.dir/src/position_control_node.cpp.o] Error 1\n'}
+[26.071837] (dynamixel_sdk_examples) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/position_control_node.dir/all] Error 2\n'}
+[26.072703] (dynamixel_sdk_examples) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[26.078751] (dynamixel_sdk_examples) CommandEnded: {'returncode': 2}
+[26.089670] (-) TimerEvent: {}
+[26.190484] (-) TimerEvent: {}
+[26.291188] (-) TimerEvent: {}
+[26.297119] (dynamixel_sdk_examples) JobEnded: {'identifier': 'dynamixel_sdk_examples', 'rc': 2}
+[26.308684] (-) EventReactorShutdown: {}

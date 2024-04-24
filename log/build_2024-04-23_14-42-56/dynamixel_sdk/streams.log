@@ -1,0 +1,41 @@
+[0.107s] Invoking command in '/home/lemmy/robotis_ws/build/dynamixel_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/lemmy/robotis_ws/build/dynamixel_sdk -- -j4 -l4
+[0.371s] [100%] Built target dynamixel_sdk
+[1.903s] Invoked command in '/home/lemmy/robotis_ws/build/dynamixel_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --build /home/lemmy/robotis_ws/build/dynamixel_sdk -- -j4 -l4
+[2.250s] Invoking command in '/home/lemmy/robotis_ws/build/dynamixel_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/lemmy/robotis_ws/build/dynamixel_sdk
+[2.284s] -- Install configuration: ""
+[2.285s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include/
+[2.286s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk
+[2.286s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler.h
+[2.289s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/dynamixel_sdk.h
+[2.290s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol2_packet_handler.h
+[2.291s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_mac.h
+[2.291s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_linux.h
+[2.292s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol1_packet_handler.h
+[2.294s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_windows.h
+[2.296s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_read.h
+[2.297s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_write.h
+[2.298s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_read.h
+[2.299s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/packet_handler.h
+[2.299s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_write.h
+[2.301s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_arduino.h
+[2.303s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/lib/libdynamixel_sdk.so
+[2.304s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.sh
+[2.304s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.dsv
+[2.305s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk
+[2.305s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk
+[2.306s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.sh
+[2.309s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.dsv
+[2.331s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.sh
+[2.332s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.dsv
+[2.332s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.bash
+[2.333s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.sh
+[2.333s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.zsh
+[2.334s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.dsv
+[2.334s] -- Installing: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.dsv
+[2.336s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/ament_index/resource_index/packages/dynamixel_sdk
+[2.336s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.337s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_libraries-extras.cmake
+[2.337s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig.cmake
+[2.339s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig-version.cmake
+[2.340s] -- Up-to-date: /home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.xml
+[2.341s] Invoked command in '/home/lemmy/robotis_ws/build/dynamixel_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble /usr/bin/cmake --install /home/lemmy/robotis_ws/build/dynamixel_sdk

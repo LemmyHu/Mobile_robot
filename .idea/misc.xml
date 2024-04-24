@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="sdkName" value="Python 3.10 (robotis_ws)" />
+  </component>
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$/src/DynamixelSDK/dynamixel_sdk_examples">
+    <contentRoot DIR="$PROJECT_DIR$" />
+  </component>
+</project>

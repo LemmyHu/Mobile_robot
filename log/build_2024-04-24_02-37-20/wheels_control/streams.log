@@ -1,0 +1,22 @@
+[10.430s] Invoking command in '/home/lemmy/robotis_ws/src/wheels_control': PYTHONPATH=/home/lemmy/robotis_ws/build/wheels_control/prefix_override:/home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/wheels_control build --build-base /home/lemmy/robotis_ws/build/wheels_control/build install --record /home/lemmy/robotis_ws/build/wheels_control/install.log --single-version-externally-managed install_data
+[12.982s] running egg_info
+[12.987s] writing ../../build/wheels_control/wheels_control.egg-info/PKG-INFO
+[12.989s] writing dependency_links to ../../build/wheels_control/wheels_control.egg-info/dependency_links.txt
+[12.990s] writing entry points to ../../build/wheels_control/wheels_control.egg-info/entry_points.txt
+[12.994s] writing requirements to ../../build/wheels_control/wheels_control.egg-info/requires.txt
+[12.996s] writing top-level names to ../../build/wheels_control/wheels_control.egg-info/top_level.txt
+[13.011s] reading manifest file '../../build/wheels_control/wheels_control.egg-info/SOURCES.txt'
+[13.023s] adding license file 'LICENSE'
+[13.025s] writing manifest file '../../build/wheels_control/wheels_control.egg-info/SOURCES.txt'
+[13.026s] running build
+[13.026s] running build_py
+[13.027s] running install
+[13.028s] running install_lib
+[13.034s] running install_data
+[13.035s] running install_egg_info
+[13.055s] removing '/home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages/wheels_control-0.0.0-py3.10.egg-info' (and everything under it)
+[13.086s] Copying ../../build/wheels_control/wheels_control.egg-info to /home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages/wheels_control-0.0.0-py3.10.egg-info
+[13.087s] running install_scripts
+[13.210s] Installing wheels_control script to /home/lemmy/robotis_ws/install/wheels_control/lib/wheels_control
+[13.212s] writing list of installed files to '/home/lemmy/robotis_ws/build/wheels_control/install.log'
+[13.429s] Invoked command in '/home/lemmy/robotis_ws/src/wheels_control' returned '0': PYTHONPATH=/home/lemmy/robotis_ws/build/wheels_control/prefix_override:/home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/wheels_control build --build-base /home/lemmy/robotis_ws/build/wheels_control/build install --record /home/lemmy/robotis_ws/build/wheels_control/install.log --single-version-externally-managed install_data

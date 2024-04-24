@@ -18,6 +18,8 @@ find_package(rosidl_default_generators REQUIRED)
 set(msg_files
   "msg/SetVelocity.msg"
   "msg/SetPosition.msg"
+  "msg/MovingStatus.msg"
+  "msg/PresentLoad.msg"
 )
 
 set(srv_files

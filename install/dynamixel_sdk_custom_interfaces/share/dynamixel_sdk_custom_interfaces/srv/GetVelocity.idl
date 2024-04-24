@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from dynamixel_sdk_custom_interfaces/srv/GetVelocity.srv
+// generated code does not contain a copyright notice
+
+
+module dynamixel_sdk_custom_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "Constants" "\n"
+      "Request")
+    struct GetVelocity_Request {
+      sequence<uint8> ids;
+    };
+    @verbatim (language="comment", text=
+      "Response")
+    struct GetVelocity_Response {
+      @verbatim (language="comment", text=
+        "Change from position to velocity")
+      sequence<int32> velocities;
+    };
+  };
+};

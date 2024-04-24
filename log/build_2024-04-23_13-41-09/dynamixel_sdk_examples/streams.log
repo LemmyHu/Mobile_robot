@@ -1,0 +1,58 @@
+[0.081s] Invoking command in '/home/lemmy/robotis_ws/build/dynamixel_sdk_examples': CMAKE_PREFIX_PATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/dynamixel_hardware:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble LD_LIBRARY_PATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk/lib:/home/lemmy/robotis_ws/install/joystick_listener/lib:/home/lemmy/ros2_ws/install/dynamixel_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages:/home/lemmy/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/lemmy/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4
+[0.219s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.955s] -- Found dynamixel_sdk: 3.7.60 (/home/lemmy/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake)
+[0.964s] -- Found dynamixel_sdk_custom_interfaces: 3.7.60 (/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)
+[1.142s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.154s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.184s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.237s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.314s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.562s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[1.799s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.806s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.869s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.583s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.063s] -- Added test 'copyright' to check source files copyright and LICENSE
+[4.121s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.121s] -- Configured cppcheck include dirs: /home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/include
+[4.122s] -- Configured cppcheck exclude dirs and/or files: 
+[4.176s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[4.177s] -- Configured cpplint exclude dirs and/or files: 
+[4.200s] -- Added test 'lint_cmake' to check CMake code style
+[4.263s] -- Added test 'uncrustify' to check C / C++ code style
+[4.264s] -- Configured uncrustify additional arguments: 
+[4.274s] -- Added test 'xmllint' to check XML markup files
+[4.280s] -- Configuring done
+[4.395s] -- Generating done
+[4.408s] -- Build files have been written to: /home/lemmy/robotis_ws/build/dynamixel_sdk_examples
+[4.542s] [35m[1mConsolidate compiler generated dependencies of target velocity_control_node[0m
+[4.544s] [35m[1mConsolidate compiler generated dependencies of target position_control_node[0m
+[4.644s] [ 25%] [32mBuilding CXX object CMakeFiles/velocity_control_node.dir/src/velocity_control_node.cpp.o[0m
+[4.661s] [ 50%] [32mBuilding CXX object CMakeFiles/position_control_node.dir/src/position_control_node.cpp.o[0m
+[17.550s] [01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:[m[K In constructor ‘[01m[KPositionControlNode::PositionControlNode()[m[K’:
+[17.551s] [01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:50:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoving_status_publisher_[m[K’ was not declared in this scope
+[17.552s]    50 |     [01;31m[Kmoving_status_publisher_[m[K = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::Status>("moving_status", qos);
+[17.552s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[17.572s] [01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:50:118:[m[K [01;31m[Kerror: [m[K‘[01m[Kqos[m[K’ was not declared in this scope; did you mean ‘[01m[Kcos[m[K’?
+[17.573s]    50 |     moving_status_publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::Status>("moving_status", [01;31m[Kqos[m[K);
+[17.574s]       |                                                                                                                      [01;31m[K^~~[m[K
+[17.574s]       |                                                                                                                      [32m[Kcos[m[K
+[17.604s] [01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:51:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kload_publisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcount_publishers[m[K’?
+[17.605s]    51 |     [01;31m[Kload_publisher_[m[K = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::Status>("present_load", qos);
+[17.605s]       |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[17.606s]       |     [32m[Kcount_publishers[m[K
+[17.656s] [01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:[m[K In lambda function:
+[17.656s] [01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:56:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kupdate_motor_status[m[K’ was not declared in this scope
+[17.657s]    56 |                 [01;31m[Kupdate_motor_status[m[K(msg->ids[0], msg->positions[0]);
+[17.657s]       |                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[17.658s] [01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:[m[K In constructor ‘[01m[KPositionControlNode::PositionControlNode()[m[K’:
+[17.658s] [01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:60:61:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+[17.659s]    60 |     void update_motor_status(uint8_t id, uint32_t position) [01;31m[K{[m[K
+[17.660s]       |                                                             [01;31m[K^[m[K
+[20.112s] gmake[2]: *** [CMakeFiles/position_control_node.dir/build.make:76: CMakeFiles/position_control_node.dir/src/position_control_node.cpp.o] Error 1
+[20.112s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/position_control_node.dir/all] Error 2
+[20.113s] gmake[1]: *** Waiting for unfinished jobs....
+[41.741s] [ 75%] [32m[1mLinking CXX executable velocity_control_node[0m
+[43.732s] [ 75%] Built target velocity_control_node
+[43.736s] gmake: *** [Makefile:146: all] Error 2
+[43.743s] Invoked command in '/home/lemmy/robotis_ws/build/dynamixel_sdk_examples' returned '2': CMAKE_PREFIX_PATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/dynamixel_hardware:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble LD_LIBRARY_PATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk/lib:/home/lemmy/robotis_ws/install/joystick_listener/lib:/home/lemmy/ros2_ws/install/dynamixel_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages:/home/lemmy/robotis_ws/install/joystick_listener/lib/python3.10/site-packages:/home/lemmy/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/lemmy/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4

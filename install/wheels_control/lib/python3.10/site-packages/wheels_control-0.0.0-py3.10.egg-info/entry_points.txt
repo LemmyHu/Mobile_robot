@@ -1,0 +1,3 @@
+[console_scripts]
+wheels_control = wheels_control.wheels_control:main
+

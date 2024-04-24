@@ -1,0 +1,185 @@
+[35m[1mConsolidate compiler generated dependencies of target position_control_node[0m
+[ 50%] Built target velocity_control_node
+[ 75%] [32mBuilding CXX object CMakeFiles/position_control_node.dir/src/position_control_node.cpp.o[0m
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:[m[K In constructor ‘[01m[KPositionControlNode::PositionControlNode()[m[K’:
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:54:51:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KPositionControlNode::create_subscription<PositionControlNode::SetPosition>(const char [13], const rclcpp::QoS&, std::_Bind_helper<false, void (PositionControlNode::*)(std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >), PositionControlNode*, const std::_Placeholder<1>&>::type, PositionControlNode::PositionControlNode()::<lambda(dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::SharedPtr)>)[m[K’
+   54 |             [01;31m[Kthis->create_subscription<SetPosition>([m[K
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   55 | [01;31m[K                    "set_position",[m[K
+      |                     [01;31m[K~~~~~~~~~~~~~~~[m[K                
+   56 | [01;31m[K                    QOS_RKL10V,[m[K
+      |                     [01;31m[K~~~~~~~~~~~[m[K                    
+   57 | [01;31m[K                    std::bind(&PositionControlNode::handle_position, this, std::placeholders::_1),[m[K
+      |                     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   58 | [01;31m[K                    [this](const dynamixel_sdk_custom_interfaces::msg::SetPosition::SharedPtr msg) -> void[m[K
+      |                     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   59 | [01;31m[K                    {[m[K
+      |                     [01;31m[K~[m[K                              
+   60 | [01;31m[K                        uint8_t dxl_error = 0;[m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~[m[K     
+   61 | 
+      |                                                    
+   62 | [01;31m[K                        // Position Value of X series is 4 byte data.[m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   63 | [01;31m[K                        // For AX & MX(1.0) use 2 byte data(uint16_t) for the Position Value.[m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   64 | [01;31m[K                        uint32_t goal_position_1 = msg->positions[0];  // Convert int32 -> uint32[m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   65 | [01;31m[K                        uint32_t goal_position_2 = msg->positions[1];[m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   66 | 
+      |                                                    
+   67 | [01;31m[K                        // Write Goal Position (length : 4 bytes)[m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   68 | [01;31m[K                        // When writing 2 byte data to AX / MX(1.0), use write2ByteTxRx() instead.[m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   69 | [01;31m[K                        dxl_comm_result =[m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~[m[K          
+   70 | [01;31m[K                                packetHandler->write4ByteTxRx([m[K
+      |                                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   71 | [01;31m[K                                        portHandler,[m[K
+      |                                         [01;31m[K~~~~~~~~~~~~[m[K
+   72 | [01;31m[K                                        1,[m[K
+      |                                         [01;31m[K~~[m[K         
+   73 | [01;31m[K                                        ADDR_GOAL_POSITION,[m[K
+      |                                         [01;31m[K~~~~~~~~~~~~~~~~~~~[m[K
+   74 | [01;31m[K                                        goal_position_1,[m[K
+      |                                         [01;31m[K~~~~~~~~~~~~~~~~[m[K
+   75 | [01;31m[K                                        &dxl_error[m[K
+      |                                         [01;31m[K~~~~~~~~~~[m[K 
+   76 | [01;31m[K                                );[m[K
+      |                                 [01;31m[K~~[m[K                 
+   77 | [01;31m[K                        dxl_comm_result =[m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~[m[K          
+   78 | [01;31m[K                                packetHandler->write4ByteTxRx([m[K
+      |                                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   79 | [01;31m[K                                        portHandler,[m[K
+      |                                         [01;31m[K~~~~~~~~~~~~[m[K
+   80 | [01;31m[K                                        2,[m[K
+      |                                         [01;31m[K~~[m[K         
+   81 | [01;31m[K                                        ADDR_GOAL_POSITION,[m[K
+      |                                         [01;31m[K~~~~~~~~~~~~~~~~~~~[m[K
+   82 | [01;31m[K                                        goal_position_2,[m[K
+      |                                         [01;31m[K~~~~~~~~~~~~~~~~[m[K
+   83 | [01;31m[K                                        &dxl_error[m[K
+      |                                         [01;31m[K~~~~~~~~~~[m[K 
+   84 | [01;31m[K                                );[m[K
+      |                                 [01;31m[K~~[m[K                 
+   85 | 
+      |                                                    
+   86 | [01;31m[K                        if (dxl_comm_result != COMM_SUCCESS) {[m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   87 | [01;31m[K                            RCLCPP_INFO(this->get_logger(), "%s", packetHandler->getTxRxResult(dxl_comm_result));[m[K
+      |                             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   88 | [01;31m[K                        } else if (dxl_error != 0) {[m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   89 | [01;31m[K                            RCLCPP_INFO(this->get_logger(), "%s", packetHandler->getRxPacketError(dxl_error));[m[K
+      |                             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   90 | [01;31m[K                        } else {[m[K
+      |                         [01;31m[K~~~~~~~~[m[K                   
+   91 | [01;31m[K                            RCLCPP_INFO(this->get_logger(), "Set [ID: %d] [Goal Position: %d]", msg->ids[0], msg->positions[0]);[m[K
+      |                             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   92 | [01;31m[K                            RCLCPP_INFO(this->get_logger(), "Set [ID: %d] [Goal Position: %d]", msg->ids[1], msg->positions[1]);[m[K
+      |                             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   93 | [01;31m[K                        }[m[K
+      |                         [01;31m[K~[m[K                          
+   94 | [01;31m[K                    }[m[K
+      |                     [01;31m[K~[m[K                              
+   95 | [01;31m[K            )[m[K;
+      |             [01;31m[K~[m[K                                      
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:10[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+  219 |   [01;36m[Kcreate_subscription[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:54:51:[m[K [01;36m[Knote: [m[K  ‘[01m[KPositionControlNode::PositionControlNode()::<lambda(dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::SharedPtr)>[m[K’ is not derived from ‘[01m[Kconst rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>[m[K’
+   54 |             [01;36m[Kthis->create_subscription<SetPosition>([m[K
+      |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   55 | [01;36m[K                    "set_position",[m[K
+      |                     [01;36m[K~~~~~~~~~~~~~~~[m[K                
+   56 | [01;36m[K                    QOS_RKL10V,[m[K
+      |                     [01;36m[K~~~~~~~~~~~[m[K                    
+   57 | [01;36m[K                    std::bind(&PositionControlNode::handle_position, this, std::placeholders::_1),[m[K
+      |                     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   58 | [01;36m[K                    [this](const dynamixel_sdk_custom_interfaces::msg::SetPosition::SharedPtr msg) -> void[m[K
+      |                     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   59 | [01;36m[K                    {[m[K
+      |                     [01;36m[K~[m[K                              
+   60 | [01;36m[K                        uint8_t dxl_error = 0;[m[K
+      |                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~[m[K     
+   61 | 
+      |                                                    
+   62 | [01;36m[K                        // Position Value of X series is 4 byte data.[m[K
+      |                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   63 | [01;36m[K                        // For AX & MX(1.0) use 2 byte data(uint16_t) for the Position Value.[m[K
+      |                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   64 | [01;36m[K                        uint32_t goal_position_1 = msg->positions[0];  // Convert int32 -> uint32[m[K
+      |                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   65 | [01;36m[K                        uint32_t goal_position_2 = msg->positions[1];[m[K
+      |                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   66 | 
+      |                                                    
+   67 | [01;36m[K                        // Write Goal Position (length : 4 bytes)[m[K
+      |                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   68 | [01;36m[K                        // When writing 2 byte data to AX / MX(1.0), use write2ByteTxRx() instead.[m[K
+      |                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   69 | [01;36m[K                        dxl_comm_result =[m[K
+      |                         [01;36m[K~~~~~~~~~~~~~~~~~[m[K          
+   70 | [01;36m[K                                packetHandler->write4ByteTxRx([m[K
+      |                                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   71 | [01;36m[K                                        portHandler,[m[K
+      |                                         [01;36m[K~~~~~~~~~~~~[m[K
+   72 | [01;36m[K                                        1,[m[K
+      |                                         [01;36m[K~~[m[K         
+   73 | [01;36m[K                                        ADDR_GOAL_POSITION,[m[K
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~~~~[m[K
+   74 | [01;36m[K                                        goal_position_1,[m[K
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~[m[K
+   75 | [01;36m[K                                        &dxl_error[m[K
+      |                                         [01;36m[K~~~~~~~~~~[m[K 
+   76 | [01;36m[K                                );[m[K
+      |                                 [01;36m[K~~[m[K                 
+   77 | [01;36m[K                        dxl_comm_result =[m[K
+      |                         [01;36m[K~~~~~~~~~~~~~~~~~[m[K          
+   78 | [01;36m[K                                packetHandler->write4ByteTxRx([m[K
+      |                                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   79 | [01;36m[K                                        portHandler,[m[K
+      |                                         [01;36m[K~~~~~~~~~~~~[m[K
+   80 | [01;36m[K                                        2,[m[K
+      |                                         [01;36m[K~~[m[K         
+   81 | [01;36m[K                                        ADDR_GOAL_POSITION,[m[K
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~~~~[m[K
+   82 | [01;36m[K                                        goal_position_2,[m[K
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~[m[K
+   83 | [01;36m[K                                        &dxl_error[m[K
+      |                                         [01;36m[K~~~~~~~~~~[m[K 
+   84 | [01;36m[K                                );[m[K
+      |                                 [01;36m[K~~[m[K                 
+   85 | 
+      |                                                    
+   86 | [01;36m[K                        if (dxl_comm_result != COMM_SUCCESS) {[m[K
+      |                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   87 | [01;36m[K                            RCLCPP_INFO(this->get_logger(), "%s", packetHandler->getTxRxResult(dxl_comm_result));[m[K
+      |                             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   88 | [01;36m[K                        } else if (dxl_error != 0) {[m[K
+      |                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   89 | [01;36m[K                            RCLCPP_INFO(this->get_logger(), "%s", packetHandler->getRxPacketError(dxl_error));[m[K
+      |                             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   90 | [01;36m[K                        } else {[m[K
+      |                         [01;36m[K~~~~~~~~[m[K                   
+   91 | [01;36m[K                            RCLCPP_INFO(this->get_logger(), "Set [ID: %d] [Goal Position: %d]", msg->ids[0], msg->positions[0]);[m[K
+      |                             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   92 | [01;36m[K                            RCLCPP_INFO(this->get_logger(), "Set [ID: %d] [Goal Position: %d]", msg->ids[1], msg->positions[1]);[m[K
+      |                             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   93 | [01;36m[K                        }[m[K
+      |                         [01;36m[K~[m[K                          
+   94 | [01;36m[K                    }[m[K
+      |                     [01;36m[K~[m[K                              
+   95 | [01;36m[K            )[m[K;
+      |             [01;36m[K~[m[K                                      
+gmake[2]: *** [CMakeFiles/position_control_node.dir/build.make:76: CMakeFiles/position_control_node.dir/src/position_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/position_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -5,6 +5,8 @@
 #include "dynamixel_sdk/dynamixel_sdk.h"
 #include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
 #include "dynamixel_sdk_custom_interfaces/srv/get_position.hpp"
+#include "dynamixel_sdk_custom_interfaces/msg/moving_status.hpp"
+#include "dynamixel_sdk_custom_interfaces/msg/present_load.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rcutils/cmdline_parser.h"
 
@@ -14,6 +16,8 @@
 #define ADDR_OPERATING_MODE 11
 #define ADDR_TORQUE_ENABLE 64
 #define ADDR_GOAL_POSITION 116
+#define ADDR_MOVING_STATUS 123
+#define ADDR_PRESENT_LOAD 126
 #define ADDR_PRESENT_POSITION 132
 
 // Protocol version
@@ -42,6 +46,9 @@ PositionControlNode::PositionControlNode()
 
     const auto QOS_RKL10V =
             rclcpp::QoS(rclcpp::KeepLast(qos_depth)).reliable().durability_volatile();
+
+    moving_status_publisher_ = this->create_publisher<MovingStatus>("moving_status", QOS_RKL10V);
+    present_load_publisher_ = this->create_publisher<PresentLoad>("present_load", QOS_RKL10V);
 
     set_position_subscriber_ =
             this->create_subscription<SetPosition>(
@@ -129,6 +136,49 @@ PositionControlNode::PositionControlNode()
 
 PositionControlNode::~PositionControlNode()
 {
+}
+
+void PositionControlNode::handle_position(const dynamixel_sdk_custom_interfaces::msg::SetPosition::SharedPtr msg) {
+    RCLCPP_INFO(this->get_logger(), "handle_position called");
+    std::vector<uint8_t> moving_statuses;
+    std::vector<int32_t> loads;
+    uint8_t moving_status = 0;
+    int32_t present_load = 0;
+
+    std::vector<int32_t> converted_ids(msg->ids.begin(), msg->ids.end()); // Convert to vector<int32_t>
+
+    for (uint8_t id : msg->ids) {
+        packetHandler->read1ByteTxRx(portHandler, id, ADDR_MOVING_STATUS, &moving_status, &dxl_error);
+        moving_statuses.push_back(moving_status);
+
+        packetHandler->read2ByteTxRx(portHandler, id, ADDR_PRESENT_LOAD, reinterpret_cast<uint16_t*>(&present_load), &dxl_error);
+        loads.push_back(present_load);
+    }
+
+    publishMovingStatus(converted_ids, moving_statuses);
+    publishPresentLoad(converted_ids, loads);
+}
+
+void PositionControlNode::publishMovingStatus(const std::vector<int32_t>& ids, const std::vector<uint8_t>& moving_statuses) {
+    auto message = MovingStatus();
+    message.ids = ids;
+    message.moving_statuses = moving_statuses;
+    moving_status_publisher_->publish(message);
+    RCLCPP_INFO(this->get_logger(), "Published Moving Status: %zu IDs", ids.size());
+    for (size_t i = 0; i < ids.size(); ++i) {
+        RCLCPP_INFO(this->get_logger(), "ID: %d, Status: %u", ids[i], moving_statuses[i]);
+    }
+}
+
+void PositionControlNode::publishPresentLoad(const std::vector<int32_t>& ids, const std::vector<int32_t>& loads) {
+    auto message = PresentLoad();
+    message.ids = ids;
+    message.loads = loads;
+    present_load_publisher_->publish(message);
+    RCLCPP_INFO(this->get_logger(), "Published Present Load: %zu IDs", ids.size());
+    for (size_t i = 0; i < ids.size(); ++i) {
+        RCLCPP_INFO(this->get_logger(), "ID: %d, Load: %d", ids[i], loads[i]);
+    }
 }
 
 void setupDynamixel(int dxl_id)

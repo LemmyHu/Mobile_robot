@@ -1,0 +1,171 @@
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:[m[K In constructor ‘[01m[KPositionControlNode::PositionControlNode()[m[K’:
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:49:80:[m[K [01;31m[Kerror: [m[K‘[01m[Kqos[m[K’ was not declared in this scope; did you mean ‘[01m[Kcos[m[K’?
+   49 |     moving_status_publisher_ = this->create_publisher<Status>("moving_status", [01;31m[Kqos[m[K);
+      |                                                                                [01;31m[K^~~[m[K
+      |                                                                                [32m[Kcos[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:[m[K In lambda function:
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:55:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kupdate_motor_status[m[K’ was not declared in this scope
+   55 |                 [01;31m[Kupdate_motor_status[m[K(msg->ids[0], msg->positions[0]);
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:[m[K At global scope:
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:60:10:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid PositionControlNode::update_motor_status(uint8_t, uint32_t)[m[K’
+   60 |     void [01;31m[KPositionControlNode[m[K::update_motor_status(uint8_t id, uint32_t position) {
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:60:10:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid PositionControlNode::update_motor_status(uint8_t, uint32_t)[m[K’
+In file included from [01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:12[m[K:
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/include/position_control_node.hpp:29:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass PositionControlNode[m[K’ defined here
+   29 | class [01;36m[KPositionControlNode[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:94:14:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ at top level
+   94 |             [[01;31m[Kthis[m[K](
+      |              [01;31m[K^~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:95:43:[m[K [01;31m[Kerror: [m[K‘[01m[KGetPosition[m[K’ was not declared in this scope; did you mean ‘[01m[Kdynamixel_sdk_custom_interfaces::srv::GetPosition[m[K’?
+   95 |                     const std::shared_ptr<[01;31m[KGetPosition[m[K::Request> request,
+      |                                           [01;31m[K^~~~~~~~~~~[m[K
+      |                                           [32m[Kdynamixel_sdk_custom_interfaces::srv::GetPosition[m[K
+In file included from [01m[K/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/get_position.hpp:7[m[K,
+                 from [01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:8[m[K:
+[01m[K/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.hpp:235:8:[m[K [01;36m[Knote: [m[K‘[01m[Kdynamixel_sdk_custom_interfaces::srv::GetPosition[m[K’ declared here
+  235 | struct [01;36m[KGetPosition[m[K
+      |        [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:95:63:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   95 |                     const std::shared_ptr<GetPosition::Request[01;31m[K>[m[K request,
+      |                                                               [01;31m[K^[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:96:37:[m[K [01;31m[Kerror: [m[K‘[01m[KGetPosition[m[K’ was not declared in this scope; did you mean ‘[01m[Kdynamixel_sdk_custom_interfaces::srv::GetPosition[m[K’?
+   96 |                     std::shared_ptr<[01;31m[KGetPosition[m[K::Response> response) -> void
+      |                                     [01;31m[K^~~~~~~~~~~[m[K
+      |                                     [32m[Kdynamixel_sdk_custom_interfaces::srv::GetPosition[m[K
+In file included from [01m[K/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/get_position.hpp:7[m[K,
+                 from [01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:8[m[K:
+[01m[K/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.hpp:235:8:[m[K [01;36m[Knote: [m[K‘[01m[Kdynamixel_sdk_custom_interfaces::srv::GetPosition[m[K’ declared here
+  235 | struct [01;36m[KGetPosition[m[K
+      |        [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:96:58:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   96 |                     std::shared_ptr<GetPosition::Response[01;31m[K>[m[K response) -> void
+      |                                                          [01;31m[K^[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:[m[K In lambda function:
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:102:42:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  102 |                         (uint8_t) request[01;31m[K->[m[Kids[0],
+      |                                          [01;31m[K^~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:104:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kpresent_position[m[K’ was not declared in this scope; did you mean ‘[01m[Kget_present_position[m[K’?
+  104 |                         reinterpret_cast<uint32_t *>(&[01;31m[Kpresent_position[m[K),
+      |                                                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |                                                       [32m[Kget_present_position[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:109:42:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  109 |                         (uint8_t) request[01;31m[K->[m[Kids[1],
+      |                                          [01;31m[K^~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:9[m[K:
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:116:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ at top level
+  116 |                         [01;31m[Kthis[m[K->get_logger(),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:116:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ at top level
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:115:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  115 |                 [01;31m[KRCLCPP_INFO[m[K(
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:115:17:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  115 |                 [01;31m[KRCLCPP_INFO[m[K(
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:115:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  115 |                 [01;31m[KRCLCPP_INFO[m[K(
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:115:17:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  115 |                 [01;31m[KRCLCPP_INFO[m[K(
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:115:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  115 |                 [01;31m[KRCLCPP_INFO[m[K(
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:9[m[K:
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:116:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  116 |                         [01;31m[Kthis[m[K->get_logger(),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:116:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  116 |                         [01;31m[Kthis[m[K->get_logger(),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:118:32:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  118 |                         request[01;31m[K->[m[Kids[0],
+      |                                [01;31m[K^~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:9[m[K:
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:122:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ at top level
+  122 |                         [01;31m[Kthis[m[K->get_logger(),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:122:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ at top level
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:121:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  121 |                 [01;31m[KRCLCPP_INFO[m[K(
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:121:17:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  121 |                 [01;31m[KRCLCPP_INFO[m[K(
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:121:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  121 |                 [01;31m[KRCLCPP_INFO[m[K(
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:121:17:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  121 |                 [01;31m[KRCLCPP_INFO[m[K(
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:121:17:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  121 |                 [01;31m[KRCLCPP_INFO[m[K(
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:9[m[K:
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:122:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  122 |                         [01;31m[Kthis[m[K->get_logger(),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:122:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  122 |                         [01;31m[Kthis[m[K->get_logger(),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:124:32:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  124 |                         request[01;31m[K->[m[Kids[1],
+      |                                [01;31m[K^~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:128:25:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  128 |                 response[01;31m[K->[m[Kpositions.push_back(present_position);
+      |                         [01;31m[K^~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:[m[K At global scope:
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:131:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_position_server_[m[K’ does not name a type
+  131 |     [01;31m[Kget_position_server_[m[K = create_service<GetPosition>("get_position", get_present_position);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:132:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  132 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/position_control_node.dir/build.make:76: CMakeFiles/position_control_node.dir/src/position_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/position_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

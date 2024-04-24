@@ -1,4 +1,6 @@
 /home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/cmake-build-debug/rosidl_adapter/dynamixel_sdk_custom_interfaces:msg/SetVelocity.idl
 /home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/cmake-build-debug/rosidl_adapter/dynamixel_sdk_custom_interfaces:msg/SetPosition.idl
+/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/cmake-build-debug/rosidl_adapter/dynamixel_sdk_custom_interfaces:msg/MovingStatus.idl
+/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/cmake-build-debug/rosidl_adapter/dynamixel_sdk_custom_interfaces:msg/PresentLoad.idl
 /home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/cmake-build-debug/rosidl_adapter/dynamixel_sdk_custom_interfaces:srv/GetVelocity.idl
 /home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/cmake-build-debug/rosidl_adapter/dynamixel_sdk_custom_interfaces:srv/GetPosition.idl

@@ -1,0 +1,14 @@
+[35m[1mConsolidate compiler generated dependencies of target position_control_node[0m
+[ 50%] Built target velocity_control_node
+[ 75%] [32mBuilding CXX object CMakeFiles/position_control_node.dir/src/position_control_node.cpp.o[0m
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:[m[K In lambda function:
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:54:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kupdate_motor_status[m[K’ was not declared in this scope
+   54 |                 [01;31m[Kupdate_motor_status[m[K(msg->ids[0], msg->positions[0]);
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:[m[K In constructor ‘[01m[KPositionControlNode::PositionControlNode()[m[K’:
+[01m[K/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/position_control_node.cpp:59:50:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before ‘[01m[K([m[K’ token
+   59 |     void PositionControlNode::update_motor_status[01;31m[K([m[Kuint8_t id, uint32_t position) {
+      |                                                  [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/position_control_node.dir/build.make:76: CMakeFiles/position_control_node.dir/src/position_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/position_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

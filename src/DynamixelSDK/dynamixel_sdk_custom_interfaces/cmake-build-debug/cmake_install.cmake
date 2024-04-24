@@ -376,6 +376,14 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dynamixel_sdk_custom_interfaces/msg" TYPE FILE FILES "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/cmake-build-debug/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/MovingStatus.idl")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dynamixel_sdk_custom_interfaces/msg" TYPE FILE FILES "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/cmake-build-debug/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/PresentLoad.idl")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dynamixel_sdk_custom_interfaces/srv" TYPE FILE FILES "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/cmake-build-debug/rosidl_adapter/dynamixel_sdk_custom_interfaces/srv/GetVelocity.idl")
 endif()
 
@@ -389,6 +397,14 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dynamixel_sdk_custom_interfaces/msg" TYPE FILE FILES "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dynamixel_sdk_custom_interfaces/msg" TYPE FILE FILES "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/msg/MovingStatus.msg")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dynamixel_sdk_custom_interfaces/msg" TYPE FILE FILES "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces/msg/PresentLoad.msg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
