@@ -1,0 +1,43 @@
+[0.075s] Invoking command in '/home/lemmy/robotis_ws/build/joystick_listener': CMAKE_PREFIX_PATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/dynamixel_hardware:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble LD_LIBRARY_PATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/lemmy/robotis_ws/install/joystick_listener/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk/lib:/home/lemmy/ros2_ws/install/dynamixel_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/lemmy/robotis_ws/build/joystick_listener -- -j4 -l4
+[0.352s] [35m[1mConsolidate compiler generated dependencies of target joystick_listener__rosidl_generator_c[0m
+[0.431s] [  3%] Built target joystick_listener__cpp
+[0.448s] [ 12%] Built target joystick_listener__rosidl_generator_c
+[0.515s] [ 12%] Built target ament_cmake_python_copy_joystick_listener
+[0.537s] [35m[1mConsolidate compiler generated dependencies of target joystick_listener__rosidl_typesupport_cpp[0m
+[0.555s] [35m[1mConsolidate compiler generated dependencies of target joystick_listener__rosidl_typesupport_introspection_cpp[0m
+[0.586s] [35m[1mConsolidate compiler generated dependencies of target joystick_listener__rosidl_typesupport_fastrtps_c[0m
+[0.600s] [35m[1mConsolidate compiler generated dependencies of target joystick_listener__rosidl_typesupport_fastrtps_cpp[0m
+[0.761s] [ 22%] Built target joystick_listener__rosidl_typesupport_introspection_cpp
+[0.764s] [ 32%] Built target joystick_listener__rosidl_typesupport_fastrtps_c
+[0.771s] [ 41%] Built target joystick_listener__rosidl_typesupport_cpp
+[0.796s] [ 51%] Built target joystick_listener__rosidl_typesupport_fastrtps_cpp
+[0.840s] [ 54%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[0.872s] [ 58%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.263s] [ 61%] [32mBuilding C object CMakeFiles/joystick_listener__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/joystick_listener/msg/detail/joystick_command__type_support.c.o[0m
+[3.404s] [ 64%] [32mBuilding CXX object CMakeFiles/joystick_listener__rosidl_typesupport_c.dir/rosidl_typesupport_c/joystick_listener/msg/joystick_command__type_support.cpp.o[0m
+[3.643s] running egg_info
+[3.650s] writing joystick_listener.egg-info/PKG-INFO
+[3.653s] writing dependency_links to joystick_listener.egg-info/dependency_links.txt
+[3.657s] writing top-level names to joystick_listener.egg-info/top_level.txt
+[3.676s] reading manifest file 'joystick_listener.egg-info/SOURCES.txt'
+[3.682s] writing manifest file 'joystick_listener.egg-info/SOURCES.txt'
+[3.816s] [ 67%] [32m[1mLinking CXX shared library libjoystick_listener__rosidl_typesupport_c.so[0m
+[3.861s] [ 70%] [32m[1mLinking C shared library libjoystick_listener__rosidl_typesupport_introspection_c.so[0m
+[3.936s] [ 70%] Built target ament_cmake_python_build_joystick_listener_egg
+[4.069s] [ 70%] Built target joystick_listener__rosidl_typesupport_introspection_c
+[4.123s] [ 70%] Built target joystick_listener__rosidl_typesupport_c
+[4.245s] [ 70%] Built target joystick_listener
+[4.369s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[6.525s] [ 74%] Built target joystick_listener__py
+[6.653s] [ 77%] [32mBuilding C object CMakeFiles/joystick_listener__rosidl_generator_py.dir/rosidl_generator_py/joystick_listener/msg/_joystick_command_s.c.o[0m
+[7.318s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/joystick_listener/libjoystick_listener__rosidl_generator_py.so[0m
+[7.564s] [ 80%] Built target joystick_listener__rosidl_generator_py
+[7.706s] [ 83%] [32mBuilding C object CMakeFiles/joystick_listener__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/joystick_listener/_joystick_listener_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[7.743s] [ 87%] [32mBuilding C object CMakeFiles/joystick_listener__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/joystick_listener/_joystick_listener_s.ep.rosidl_typesupport_c.c.o[0m
+[7.766s] [ 90%] [32mBuilding C object CMakeFiles/joystick_listener__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/joystick_listener/_joystick_listener_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[8.446s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/joystick_listener/joystick_listener_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so[0m
+[8.530s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/joystick_listener/joystick_listener_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so[0m
+[8.600s] [100%] [32m[1mLinking C shared library rosidl_generator_py/joystick_listener/joystick_listener_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so[0m
+[8.736s] [100%] Built target joystick_listener__rosidl_typesupport_c__pyext
+[8.828s] [100%] Built target joystick_listener__rosidl_typesupport_fastrtps_c__pyext
+[8.849s] [100%] Built target joystick_listener__rosidl_typesupport_introspection_c__pyext

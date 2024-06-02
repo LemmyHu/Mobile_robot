@@ -1,0 +1,20 @@
+{
+  "package_name": "dynamixel_sdk_custom_interfaces",
+  "non_idl_tuples": [
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:msg/SetVelocity.msg",
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:msg/SetPosition.msg",
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:msg/MovingStatus.msg",
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:msg/PresentPWM.msg",
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:msg/PresentLoad.msg",
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:msg/PresentPosition.msg",
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:msg/PresentVelocity.msg",
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:msg/ProfileVelocity.msg",
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:msg/PositionPIDGain.msg",
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:msg/PositionTrajectory.msg",
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:msg/VelocityTrajectory.msg",
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:srv/GetVelocity.srv",
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:srv/GetPosition.srv",
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:srv/GetPIDParams.srv",
+    "/home/lemmy/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces:srv/SetPIDParams.srv"
+  ]
+}

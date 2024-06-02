@@ -1,0 +1,159 @@
+[0.074s] Invoking command in '/home/lemmy/robotis_ws/build/joystick_listener': CMAKE_PREFIX_PATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/dynamixel_hardware:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble LD_LIBRARY_PATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/lemmy/robotis_ws/install/joystick_listener/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk/lib:/home/lemmy/ros2_ws/install/dynamixel_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/lemmy/robotis_ws/build/joystick_listener -- -j4 -l4
+[0.443s] [  3%] Built target joystick_listener__cpp
+[0.487s] [ 12%] Built target joystick_listener__rosidl_generator_c
+[0.589s] [ 12%] Built target ament_cmake_python_copy_joystick_listener
+[0.632s] [ 22%] Built target joystick_listener__rosidl_typesupport_cpp
+[0.699s] [ 32%] Built target joystick_listener__rosidl_typesupport_introspection_cpp
+[0.701s] [ 41%] Built target joystick_listener__rosidl_typesupport_fastrtps_cpp
+[0.859s] [ 51%] Built target joystick_listener__rosidl_typesupport_introspection_c
+[0.874s] [ 61%] Built target joystick_listener__rosidl_typesupport_fastrtps_c
+[0.912s] [ 70%] Built target joystick_listener__rosidl_typesupport_c
+[1.026s] [ 70%] Built target joystick_listener
+[1.161s] [ 74%] Built target joystick_listener__py
+[1.294s] [ 80%] Built target joystick_listener__rosidl_generator_py
+[1.447s] [ 87%] Built target joystick_listener__rosidl_typesupport_fastrtps_c__pyext
+[1.448s] [ 93%] Built target joystick_listener__rosidl_typesupport_introspection_c__pyext
+[1.485s] [100%] Built target joystick_listener__rosidl_typesupport_c__pyext
+[2.290s] running egg_info
+[2.293s] writing joystick_listener.egg-info/PKG-INFO
+[2.294s] writing dependency_links to joystick_listener.egg-info/dependency_links.txt
+[2.296s] writing top-level names to joystick_listener.egg-info/top_level.txt
+[2.307s] reading manifest file 'joystick_listener.egg-info/SOURCES.txt'
+[2.310s] writing manifest file 'joystick_listener.egg-info/SOURCES.txt'
+[2.449s] [100%] Built target ament_cmake_python_build_joystick_listener_egg
+[2.495s] Invoked command in '/home/lemmy/robotis_ws/build/joystick_listener' returned '0': CMAKE_PREFIX_PATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/dynamixel_hardware:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble LD_LIBRARY_PATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/lemmy/robotis_ws/install/joystick_listener/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk/lib:/home/lemmy/ros2_ws/install/dynamixel_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/lemmy/robotis_ws/build/joystick_listener -- -j4 -l4
+[2.957s] Invoking command in '/home/lemmy/robotis_ws/build/joystick_listener': CMAKE_PREFIX_PATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/dynamixel_hardware:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble LD_LIBRARY_PATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/lemmy/robotis_ws/install/joystick_listener/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk/lib:/home/lemmy/ros2_ws/install/dynamixel_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/lemmy/robotis_ws/build/joystick_listener
+[2.994s] -- Install configuration: ""
+[2.994s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/ament_index/resource_index/rosidl_interfaces/joystick_listener
+[2.996s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener
+[2.997s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg
+[2.997s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/joystick_command.h
+[2.999s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail
+[3.000s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__type_support.h
+[3.002s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__functions.h
+[3.004s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__functions.c
+[3.007s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__struct.h
+[3.008s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/rosidl_generator_c__visibility_control.h
+[3.010s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/environment/library_path.sh
+[3.011s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/environment/library_path.dsv
+[3.014s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_generator_c.so
+[3.017s] -- Set runtime path of "/home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_generator_c.so" to ""
+[3.017s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener
+[3.018s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg
+[3.018s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.020s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail
+[3.020s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__rosidl_typesupport_fastrtps_c.h
+[3.023s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_fastrtps_c.so
+[3.026s] -- Set runtime path of "/home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_fastrtps_c.so" to ""
+[3.026s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener
+[3.027s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg
+[3.027s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/joystick_command.hpp
+[3.028s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail
+[3.029s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__builder.hpp
+[3.031s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__traits.hpp
+[3.032s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__struct.hpp
+[3.034s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener
+[3.034s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg
+[3.035s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.036s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail
+[3.037s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/dds_fastrtps
+[3.037s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__rosidl_typesupport_fastrtps_cpp.hpp
+[3.040s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_fastrtps_cpp.so
+[3.044s] -- Set runtime path of "/home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_fastrtps_cpp.so" to ""
+[3.045s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener
+[3.045s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg
+[3.046s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail
+[3.046s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__type_support.c
+[3.047s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__rosidl_typesupport_introspection_c.h
+[3.050s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.052s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_introspection_c.so
+[3.055s] -- Set runtime path of "/home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_introspection_c.so" to ""
+[3.056s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_c.so
+[3.058s] -- Set runtime path of "/home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_c.so" to ""
+[3.059s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener
+[3.059s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg
+[3.060s] -- Up-to-date: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail
+[3.060s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__type_support.cpp
+[3.062s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/include/joystick_listener/joystick_listener/msg/detail/joystick_command__rosidl_typesupport_introspection_cpp.hpp
+[3.065s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_introspection_cpp.so
+[3.069s] -- Set runtime path of "/home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_introspection_cpp.so" to ""
+[3.069s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_cpp.so
+[3.073s] -- Set runtime path of "/home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_typesupport_cpp.so" to ""
+[3.073s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/environment/pythonpath.sh
+[3.075s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/environment/pythonpath.dsv
+[3.077s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener-0.0.0-py3.10.egg-info
+[3.078s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener-0.0.0-py3.10.egg-info/SOURCES.txt
+[3.079s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener-0.0.0-py3.10.egg-info/dependency_links.txt
+[3.080s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener-0.0.0-py3.10.egg-info/PKG-INFO
+[3.082s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener-0.0.0-py3.10.egg-info/top_level.txt
+[3.083s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener
+[3.084s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/__init__.py
+[3.086s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/libjoystick_listener__rosidl_generator_py.so
+[3.087s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/joystick_listener_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[3.088s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/_joystick_listener_s.ep.rosidl_typesupport_c.c
+[3.090s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/_joystick_listener_s.ep.rosidl_typesupport_introspection_c.c
+[3.091s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/_joystick_listener_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.093s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/joystick_listener_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[3.094s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/msg
+[3.095s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/msg/__init__.py
+[3.096s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/msg/_joystick_command_s.c
+[3.097s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/msg/_joystick_command.py
+[3.098s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/joystick_listener_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[3.273s] Listing '/home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener'...
+[3.278s] Compiling '/home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/__init__.py'...
+[3.281s] Listing '/home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/msg'...
+[3.283s] Compiling '/home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/msg/__init__.py'...
+[3.285s] Compiling '/home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/msg/_joystick_command.py'...
+[3.307s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/joystick_listener_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[3.310s] -- Set runtime path of "/home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/joystick_listener_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""
+[3.311s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/joystick_listener_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[3.315s] -- Set runtime path of "/home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/joystick_listener_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""
+[3.317s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/joystick_listener_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[3.321s] -- Set runtime path of "/home/lemmy/robotis_ws/install/joystick_listener/local/lib/python3.10/dist-packages/joystick_listener/joystick_listener_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""
+[3.321s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_generator_py.so
+[3.324s] -- Set runtime path of "/home/lemmy/robotis_ws/install/joystick_listener/lib/libjoystick_listener__rosidl_generator_py.so" to ""
+[3.325s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/msg/JoystickCommand.idl
+[3.326s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/msg/JoystickCommand.msg
+[3.331s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/lib/joystick_listener/joystick_control.py
+[3.332s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/launch
+[3.332s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/launch/joystick_listener.launch.py
+[3.335s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/ament_index/resource_index/package_run_dependencies/joystick_listener
+[3.338s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/ament_index/resource_index/parent_prefix_path/joystick_listener
+[3.340s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/environment/ament_prefix_path.sh
+[3.341s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/environment/ament_prefix_path.dsv
+[3.344s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/environment/path.sh
+[3.345s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/environment/path.dsv
+[3.347s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/local_setup.bash
+[3.349s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/local_setup.sh
+[3.351s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/local_setup.zsh
+[3.353s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/local_setup.dsv
+[3.355s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/package.dsv
+[3.357s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/ament_index/resource_index/packages/joystick_listener
+[3.359s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_generator_cExport.cmake
+[3.361s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_generator_cExport-noconfig.cmake
+[3.363s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_typesupport_fastrtps_cExport.cmake
+[3.365s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.367s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_generator_cppExport.cmake
+[3.370s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.372s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.374s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listener__rosidl_typesupport_introspection_cExport.cmake
+[3.376s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listener__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.378s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listener__rosidl_typesupport_cExport.cmake
+[3.380s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listener__rosidl_typesupport_cExport-noconfig.cmake
+[3.383s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listener__rosidl_typesupport_introspection_cppExport.cmake
+[3.385s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listener__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.388s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listener__rosidl_typesupport_cppExport.cmake
+[3.390s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listener__rosidl_typesupport_cppExport-noconfig.cmake
+[3.392s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_generator_pyExport.cmake
+[3.395s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/export_joystick_listener__rosidl_generator_pyExport-noconfig.cmake
+[3.397s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/rosidl_cmake-extras.cmake
+[3.399s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.401s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/ament_cmake_export_libraries-extras.cmake
+[3.403s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/ament_cmake_export_targets-extras.cmake
+[3.405s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.407s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.410s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.412s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listenerConfig.cmake
+[3.413s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/cmake/joystick_listenerConfig-version.cmake
+[3.415s] -- Installing: /home/lemmy/robotis_ws/install/joystick_listener/share/joystick_listener/package.xml
+[3.425s] Invoked command in '/home/lemmy/robotis_ws/build/joystick_listener' returned '0': CMAKE_PREFIX_PATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/dynamixel_hardware:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble LD_LIBRARY_PATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/lemmy/robotis_ws/install/joystick_listener/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk/lib:/home/lemmy/ros2_ws/install/dynamixel_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/lemmy/robotis_ws/build/joystick_listener

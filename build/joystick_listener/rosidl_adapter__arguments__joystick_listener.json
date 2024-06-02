@@ -1,0 +1,6 @@
+{
+  "package_name": "joystick_listener",
+  "non_idl_tuples": [
+    "/home/lemmy/robotis_ws/src/joystick_listener:msg/JoystickCommand.msg"
+  ]
+}

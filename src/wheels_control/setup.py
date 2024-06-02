@@ -9,6 +9,7 @@ setup(
     data_files=[
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/launch', ['launch/wheels_control.launch.py']),
+        ('share/' + package_name + '/launch', ['launch/predefined_path.launch.py']),
         ('share/ament_index/resource_index/packages', ['resource/' + package_name])
     ],
     install_requires=['setuptools'],
@@ -20,7 +21,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'wheels_control = wheels_control.wheels_control:main'
+            'wheels_control = wheels_control.wheels_control:main',
+            'predefined_path = wheels_control.predefined_path:main'
         ],
     },
 )
