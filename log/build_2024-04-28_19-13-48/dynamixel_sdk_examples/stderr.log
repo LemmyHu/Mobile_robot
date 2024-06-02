@@ -1,7 +1,0 @@
-gmake[2]: *** wait: No child processes.  Stop.
-gmake[2]: *** Waiting for unfinished jobs....
-gmake[2]: *** [CMakeFiles/velocity_control_node.dir/build.make:76: CMakeFiles/velocity_control_node.dir/src/velocity_control_node.cpp.o] Interrupt
-gmake[2]: *** wait: No child processes.  Stop.
-gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/velocity_control_node.dir/all] Interrupt
-gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/position_control_node.dir/all] Error 2
-gmake: *** [Makefile:146: all] Interrupt
