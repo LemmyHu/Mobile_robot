@@ -1,0 +1,29 @@
+[0.085s] Invoking command in '/home/lemmy/robotis_ws/build/joystick_listener': CMAKE_PREFIX_PATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/lemmy/robotis_ws/install/joystick_listener:/home/lemmy/robotis_ws/install/dynamixel_sdk_examples:/home/lemmy/robotis_ws/install/dynamixel_sdk:/home/lemmy/ros2_ws/install/pantilt_bot_description:/home/lemmy/ros2_ws/install/open_manipulator_x_description:/home/lemmy/ros2_ws/install/dynamixel_hardware:/home/lemmy/robotis_ws/install/wheels_control:/home/lemmy/ros2_ws/install/my_robot_controller:/opt/ros/humble LD_LIBRARY_PATH=/home/lemmy/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/lemmy/robotis_ws/install/joystick_listener/lib:/home/lemmy/robotis_ws/install/dynamixel_sdk/lib:/home/lemmy/ros2_ws/install/dynamixel_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/lemmy/robotis_ws/build/joystick_listener -- -j4 -l4
+[0.468s] [  9%] Built target joystick_listener__rosidl_generator_c
+[0.475s] [ 12%] Built target joystick_listener__cpp
+[0.582s] [ 12%] Built target ament_cmake_python_copy_joystick_listener
+[0.583s] [35m[1mConsolidate compiler generated dependencies of target joystick_listener__rosidl_typesupport_introspection_c[0m
+[0.618s] [35m[1mConsolidate compiler generated dependencies of target joystick_listener__rosidl_typesupport_c[0m
+[0.731s] [ 22%] Built target joystick_listener__rosidl_typesupport_c
+[0.736s] [ 32%] Built target joystick_listener__rosidl_typesupport_introspection_c
+[0.785s] [ 41%] Built target joystick_listener__rosidl_typesupport_fastrtps_c
+[0.810s] [ 51%] Built target joystick_listener__rosidl_typesupport_introspection_cpp
+[0.904s] [ 61%] Built target joystick_listener__rosidl_typesupport_cpp
+[0.929s] [ 70%] Built target joystick_listener__rosidl_typesupport_fastrtps_cpp
+[1.032s] [ 70%] Built target joystick_listener
+[1.133s] [ 74%] Built target joystick_listener__py
+[1.187s] [35m[1mConsolidate compiler generated dependencies of target joystick_listener__rosidl_generator_py[0m
+[1.270s] [ 80%] Built target joystick_listener__rosidl_generator_py
+[1.328s] [35m[1mConsolidate compiler generated dependencies of target joystick_listener__rosidl_typesupport_introspection_c__pyext[0m
+[1.330s] [35m[1mConsolidate compiler generated dependencies of target joystick_listener__rosidl_typesupport_fastrtps_c__pyext[0m
+[1.332s] [35m[1mConsolidate compiler generated dependencies of target joystick_listener__rosidl_typesupport_c__pyext[0m
+[1.417s] [ 87%] Built target joystick_listener__rosidl_typesupport_c__pyext
+[1.424s] [ 93%] Built target joystick_listener__rosidl_typesupport_fastrtps_c__pyext
+[1.425s] [100%] Built target joystick_listener__rosidl_typesupport_introspection_c__pyext
+[2.142s] running egg_info
+[2.145s] writing joystick_listener.egg-info/PKG-INFO
+[2.146s] writing dependency_links to joystick_listener.egg-info/dependency_links.txt
+[2.147s] writing top-level names to joystick_listener.egg-info/top_level.txt
+[2.158s] reading manifest file 'joystick_listener.egg-info/SOURCES.txt'
+[2.161s] writing manifest file 'joystick_listener.egg-info/SOURCES.txt'
+[2.313s] [100%] Built target ament_cmake_python_build_joystick_listener_egg

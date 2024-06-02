@@ -1,0 +1,8 @@
+# Constants
+# Request
+int32[] ids
+---
+# Response
+uint16[] p_gains
+uint16[] i_gains
+uint16[] d_gains

@@ -19,12 +19,21 @@ set(msg_files
   "msg/SetVelocity.msg"
   "msg/SetPosition.msg"
   "msg/MovingStatus.msg"
+  "msg/PresentPWM.msg"
   "msg/PresentLoad.msg"
+  "msg/PresentPosition.msg"
+  "msg/PresentVelocity.msg"
+  "msg/ProfileVelocity.msg"
+  "msg/PositionPIDGain.msg"
+  "msg/PositionTrajectory.msg"
+  "msg/VelocityTrajectory.msg"
 )
 
 set(srv_files
   "srv/GetVelocity.srv"
   "srv/GetPosition.srv"
+  "srv/GetPIDParams.srv"
+  "srv/SetPIDParams.srv"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}

@@ -32,11 +32,19 @@ ament_target_dependencies(position_control_node
         dynamixel_sdk
         rclcpp
 )
+add_executable(pid_client_node src/pid_client_node.cpp
+        src/pid_client_node.cpp)
+ament_target_dependencies(pid_client_node
+        dynamixel_sdk_custom_interfaces
+        dynamixel_sdk
+        rclcpp
+)
 
 # Install
 install(TARGETS
   velocity_control_node
   position_control_node
+  pid_client_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
