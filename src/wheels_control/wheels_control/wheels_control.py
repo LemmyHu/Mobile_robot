@@ -11,7 +11,7 @@ class MotorController(Node):
         self.publisher_ = self.create_publisher(SetPosition, 'set_position', 10)
         self.wheel_diameter_cm = 6.5  # in cm
         self.motor_max_position = 4095  # Max positional value for one full revolution
-        self.profile_velocity = 300
+        self.profile_velocity = 270
         self.goal_pwm = 855
         # Timer initialization
         self.action_timer = self.create_timer(1, self.move_forward)  # Initial delay before starting the loop

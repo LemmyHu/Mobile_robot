@@ -25,18 +25,15 @@ ament_target_dependencies(velocity_control_node
   dynamixel_sdk
   rclcpp
 )
-add_executable(position_control_node src/position_control_node.cpp
-        src/position_control_node.cpp)
+add_executable(position_control_node src/position_control_node.cpp)
 ament_target_dependencies(position_control_node
         dynamixel_sdk_custom_interfaces
         dynamixel_sdk
         rclcpp
 )
-add_executable(pid_client_node src/pid_client_node.cpp
-        src/pid_client_node.cpp)
+add_executable(pid_client_node src/pid_client_node.cpp)
 ament_target_dependencies(pid_client_node
         dynamixel_sdk_custom_interfaces
-        dynamixel_sdk
         rclcpp
 )
 

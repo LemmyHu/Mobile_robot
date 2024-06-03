@@ -1,6 +1,0 @@
-  File "/home/lemmy/robotis_ws/install/wheels_control/lib/python3.10/site-packages/wheels_control/predefined_path.py", line 1
-    "#!/usr/bin/env python3
-    ^
-SyntaxError: unterminated string literal (detected at line 1)
-
-error: can't copy 'launch/predefined_path.launch.py': doesn't exist or not a regular file
