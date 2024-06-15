@@ -19,6 +19,8 @@
 #include <memory>
 #include <string>
 #include <chrono>
+#include <vector>
+#include <cmath>
 
 #include "rclcpp/rclcpp.hpp"
 #include "rcutils/cmdline_parser.h"
@@ -58,7 +60,6 @@ public:
     PositionControlNode();
     virtual ~PositionControlNode();
 
-    //void update_motor_status(uint8_t id, uint32_t position);  // Declaration of update_motor_status
     void periodicStatusUpdate();
     void publishMovingStatus(const std::vector<int32_t>& ids, const std::vector<uint8_t>& moving_statuses);
     void publishPresentPWM(const std::vector<int32_t>& ids, const std::vector<int32_t>& pwms);
@@ -72,6 +73,10 @@ public:
     void send_request();
     void getPIDParams(const std::shared_ptr<GetPIDParams::Request> request, std::shared_ptr<GetPIDParams::Response> response);
     void setPIDParams(const std::shared_ptr<SetPIDParams::Request> request, std::shared_ptr<SetPIDParams::Response> response);
+    void moveToPosition(double x_goal, double y_goal);
+    double calculateDistanceToGoal(double current_x, double current_y, double goal_x, double goal_y);
+    double getCurrentX();
+    double getCurrentY();
 
 
 private:
