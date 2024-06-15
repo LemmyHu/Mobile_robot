@@ -2,6 +2,7 @@
 #include <memory>
 #include <string>
 #include <chrono>
+#include <cmath>
 
 #include "dynamixel_sdk/dynamixel_sdk.h"
 #include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
@@ -12,6 +13,7 @@
 #include "dynamixel_sdk_custom_interfaces/msg/present_velocity.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rcutils/cmdline_parser.h"
+#include "geometry_msgs/msg/twist.hpp"
 
 #include "position_control_node.hpp"
 
@@ -42,6 +44,7 @@
 // Default setting
 #define BAUDRATE 57600  // Default Baudrate of DYNAMIXEL X series
 #define DEVICE_NAME "/dev/ttyUSB0"  // [Linux]: "/dev/ttyUSB*", [Windows]: "COM*"
+
 
 dynamixel::PortHandler * portHandler;
 dynamixel::PacketHandler * packetHandler;
@@ -287,7 +290,7 @@ void PositionControlNode::publishMovingStatus(const std::vector<int32_t>& ids, c
     moving_status_publisher_->publish(message);
     //RCLCPP_INFO(this->get_logger(), "Published Moving Status: %zu IDs", ids.size());
     //for (size_t i = 0; i < ids.size(); ++i) {
-        //RCLCPP_INFO(this->get_logger(), "ID: %d, Status: %u", ids[i], moving_statuses[i]);
+    //RCLCPP_INFO(this->get_logger(), "ID: %d, Status: %u", ids[i], moving_statuses[i]);
     //}
 }
 
@@ -371,7 +374,7 @@ void PositionControlNode::publishProfileVelocity(const std::vector<int32_t>& ids
     profile_velocity_publisher_->publish(message);
     //RCLCPP_INFO(this->get_logger(), "Published Profile Velocity: %zu IDs", ids.size());
     //for (size_t i = 0; i < ids.size(); ++i) {
-        //RCLCPP_INFO(this->get_logger(), "ID: %d, Profile Velocity: %d", ids[i], profile_velocities[i]);
+    //RCLCPP_INFO(this->get_logger(), "ID: %d, Profile Velocity: %d", ids[i], profile_velocities[i]);
     //}
 }
 
