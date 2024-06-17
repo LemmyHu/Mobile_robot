@@ -38,6 +38,9 @@ ament_target_dependencies(odometry_node
         tf2_geometry_msgs
 )
 
+include_directories(
+        ${dynamixel_sdk_custom_interfaces_INCLUDE_DIRS})
+
 install(TARGETS
         pose_controller
         odometry_node
