@@ -47,13 +47,15 @@
 #define BAUDRATE 57600  // Default Baudrate of DYNAMIXEL X series
 #define DEVICE_NAME "/dev/ttyUSB0"  // [Linux]: "/dev/ttyUSB*", [Windows]: "COM*"
 
-
 dynamixel::PortHandler * portHandler;
 dynamixel::PacketHandler * packetHandler;
 dynamixel::GroupSyncWrite * groupSyncWritePosition;
 dynamixel::GroupSyncWrite * groupSyncWriteVelocity;
 dynamixel::GroupSyncWrite * groupSyncWritePWM;
-dynamixel::GroupSyncRead * groupSyncRead;
+dynamixel::GroupSyncRead * groupSyncReadPosition;
+dynamixel::GroupSyncRead * groupSyncReadVelocity;
+dynamixel::GroupSyncRead * groupSyncReadLoad;
+dynamixel::GroupSyncRead * groupSyncReadPWM;
 
 using namespace std::chrono_literals;
 
@@ -79,12 +81,46 @@ PositionControlNode::PositionControlNode()
 
     // Initialize GroupSyncWrite for goal position
     groupSyncWritePosition = new dynamixel::GroupSyncWrite(portHandler, packetHandler, ADDR_GOAL_POSITION, LEN_GOAL_POSITION);
+    if (!groupSyncWritePosition) {
+        RCLCPP_ERROR(this->get_logger(), "Failed to initialize GroupSyncWritePosition");
+        return;
+    }
     // Initialize GroupSyncWrite for profile velocity
     groupSyncWriteVelocity = new dynamixel::GroupSyncWrite(portHandler, packetHandler, ADDR_PROFILE_VELOCITY, LEN_PROFILE_VELOCITY);
+    if (!groupSyncWriteVelocity) {
+        RCLCPP_ERROR(this->get_logger(), "Failed to initialize GroupSyncWriteVelocity");
+        return;
+    }
     // Initialize GroupSyncWrite for goal PWM
     groupSyncWritePWM = new dynamixel::GroupSyncWrite(portHandler, packetHandler, ADDR_GOAL_PWM, LEN_GOAL_PWM);
+    if (!groupSyncWritePWM) {
+        RCLCPP_ERROR(this->get_logger(), "Failed to initialize GroupSyncWritePWM");
+        return;
+    }
     // Initialize GroupSyncRead for present position
-    groupSyncRead = new dynamixel::GroupSyncRead(portHandler, packetHandler, ADDR_PRESENT_POSITION, LEN_PRESENT_POSITION);
+    groupSyncReadPosition = new dynamixel::GroupSyncRead(portHandler, packetHandler, ADDR_PRESENT_POSITION, LEN_PRESENT_POSITION);
+    if (!groupSyncReadPosition) {
+        RCLCPP_ERROR(this->get_logger(), "Failed to initialize GroupSyncRead for position");
+        return;
+    }
+    // Initialize GroupSyncRead for present velocity
+    groupSyncReadVelocity = new dynamixel::GroupSyncRead(portHandler, packetHandler, ADDR_PRESENT_VELOCITY, LEN_PRESENT_VELOCITY);
+    if (!groupSyncReadVelocity) {
+        RCLCPP_ERROR(this->get_logger(), "Failed to initialize GroupSyncRead for velocity");
+        return;
+    }
+    // Initialize GroupSyncRead for present load
+    groupSyncReadLoad = new dynamixel::GroupSyncRead(portHandler, packetHandler, ADDR_PRESENT_LOAD, LEN_PRESENT_LOAD);
+    if (!groupSyncReadLoad) {
+        RCLCPP_ERROR(this->get_logger(), "Failed to initialize GroupSyncRead for load");
+        return;
+    }
+    // Initialize GroupSyncRead for present PWM
+    groupSyncReadPWM = new dynamixel::GroupSyncRead(portHandler, packetHandler, ADDR_PRESENT_PWM, LEN_PRESENT_PWM);
+    if (!groupSyncReadPWM) {
+        RCLCPP_ERROR(this->get_logger(), "Failed to initialize GroupSyncRead for PWM");
+        return;
+    }
 
     this->declare_parameter("qos_depth", 10);
     int8_t qos_depth = 0;
@@ -177,67 +213,109 @@ PositionControlNode::~PositionControlNode()
         delete groupSyncWritePWM;
         groupSyncWritePWM = nullptr;
     }
-    if (groupSyncRead) {
-        delete groupSyncRead;
-        groupSyncRead = nullptr;
+    if (groupSyncReadPosition) {
+        delete groupSyncReadPosition;
+        groupSyncReadPosition = nullptr;
+    }
+    if (groupSyncReadVelocity) {
+        delete groupSyncReadVelocity;
+        groupSyncReadVelocity = nullptr;
+    }
+    if (groupSyncReadLoad) {
+        delete groupSyncReadLoad;
+        groupSyncReadLoad = nullptr;
+    }
+    if (groupSyncReadPWM) {
+        delete groupSyncReadPWM;
+        groupSyncReadPWM = nullptr;
     }
 }
 
 void PositionControlNode::periodicStatusUpdate() {
     RCLCPP_INFO(this->get_logger(), "Periodic status update called");
     std::vector<int32_t> ids_to_monitor = {1, 2};
-    for (int32_t id : ids_to_monitor) {  // Add parameters for GroupSyncRead
-        groupSyncRead->addParam(id);
-    }
 
-    // Transmit Sync Read Packet
-    dxl_comm_result = groupSyncRead->txRxPacket();
+    // Read Present Position
+    for (int32_t id : ids_to_monitor) {
+        groupSyncReadPosition->addParam(id);
+    }
+    dxl_comm_result = groupSyncReadPosition->txRxPacket();
     if (dxl_comm_result != COMM_SUCCESS) {
-        RCLCPP_ERROR(this->get_logger(), "GroupSyncRead Error: %s", packetHandler->getTxRxResult(dxl_comm_result));
+        RCLCPP_ERROR(this->get_logger(), "GroupSyncRead Position Error: %s", packetHandler->getTxRxResult(dxl_comm_result));
         return;
     }
-
     std::vector<int32_t> positions;
-    std::vector<int32_t> velocities;
-    std::vector<int32_t> loads;
-    std::vector<int32_t> pwms;
-
     for (int32_t id : ids_to_monitor) {
-        // Check if present position data is available and get it
-        if (groupSyncRead->isAvailable(id, ADDR_PRESENT_POSITION, LEN_PRESENT_POSITION)) {
-            int32_t position = groupSyncRead->getData(id, ADDR_PRESENT_POSITION, LEN_PRESENT_POSITION);
+        if (groupSyncReadPosition->isAvailable(id, ADDR_PRESENT_POSITION, LEN_PRESENT_POSITION)) {
+            int32_t position = groupSyncReadPosition->getData(id, ADDR_PRESENT_POSITION, LEN_PRESENT_POSITION);
             positions.push_back(position);
         } else {
             RCLCPP_ERROR(this->get_logger(), "Failed to get present position data for ID: %d", id);
         }
+    }
+    groupSyncReadPosition->clearParam();
 
-        // Check if present velocity data is available and get it
-        if (groupSyncRead->isAvailable(id, ADDR_PRESENT_VELOCITY, LEN_PRESENT_VELOCITY)) {
-            int32_t velocity = groupSyncRead->getData(id, ADDR_PRESENT_VELOCITY, LEN_PRESENT_VELOCITY);
+    // Read Present Velocity
+    for (int32_t id : ids_to_monitor) {
+        groupSyncReadVelocity->addParam(id);
+    }
+    dxl_comm_result = groupSyncReadVelocity->txRxPacket();
+    if (dxl_comm_result != COMM_SUCCESS) {
+        RCLCPP_ERROR(this->get_logger(), "GroupSyncRead Velocity Error: %s", packetHandler->getTxRxResult(dxl_comm_result));
+        return;
+    }
+    std::vector<int32_t> velocities;
+    for (int32_t id : ids_to_monitor) {
+        if (groupSyncReadVelocity->isAvailable(id, ADDR_PRESENT_VELOCITY, LEN_PRESENT_VELOCITY)) {
+            int32_t velocity = groupSyncReadVelocity->getData(id, ADDR_PRESENT_VELOCITY, LEN_PRESENT_VELOCITY);
             velocities.push_back(velocity);
         } else {
             RCLCPP_ERROR(this->get_logger(), "Failed to get present velocity data for ID: %d", id);
         }
+    }
+    groupSyncReadVelocity->clearParam();
 
-        // Check if present load data is available and get it
-        if (groupSyncRead->isAvailable(id, ADDR_PRESENT_LOAD, LEN_PRESENT_LOAD)) {
-            int32_t load = groupSyncRead->getData(id, ADDR_PRESENT_LOAD, LEN_PRESENT_LOAD);
+    // Read Present Load
+    for (int32_t id : ids_to_monitor) {
+        groupSyncReadLoad->addParam(id);
+    }
+    dxl_comm_result = groupSyncReadLoad->txRxPacket();
+    if (dxl_comm_result != COMM_SUCCESS) {
+        RCLCPP_ERROR(this->get_logger(), "GroupSyncRead Load Error: %s", packetHandler->getTxRxResult(dxl_comm_result));
+        return;
+    }
+    std::vector<int32_t> loads;
+    for (int32_t id : ids_to_monitor) {
+        if (groupSyncReadLoad->isAvailable(id, ADDR_PRESENT_LOAD, LEN_PRESENT_LOAD)) {
+            int32_t load = groupSyncReadLoad->getData(id, ADDR_PRESENT_LOAD, LEN_PRESENT_LOAD);
             loads.push_back(load);
         } else {
             RCLCPP_ERROR(this->get_logger(), "Failed to get present load data for ID: %d", id);
         }
+    }
+    groupSyncReadLoad->clearParam();
 
-        // Check if present PWM data is available and get it
-        if (groupSyncRead->isAvailable(id, ADDR_PRESENT_PWM, LEN_PRESENT_PWM)) {
-            int32_t pwm = groupSyncRead->getData(id, ADDR_PRESENT_PWM, LEN_PRESENT_PWM);
+    // Read Present PWM
+    for (int32_t id : ids_to_monitor) {
+        groupSyncReadPWM->addParam(id);
+    }
+    dxl_comm_result = groupSyncReadPWM->txRxPacket();
+    if (dxl_comm_result != COMM_SUCCESS) {
+        RCLCPP_ERROR(this->get_logger(), "GroupSyncRead PWM Error: %s", packetHandler->getTxRxResult(dxl_comm_result));
+        return;
+    }
+    std::vector<int32_t> pwms;
+    for (int32_t id : ids_to_monitor) {
+        if (groupSyncReadPWM->isAvailable(id, ADDR_PRESENT_PWM, LEN_PRESENT_PWM)) {
+            int32_t pwm = groupSyncReadPWM->getData(id, ADDR_PRESENT_PWM, LEN_PRESENT_PWM);
             pwms.push_back(pwm);
         } else {
             RCLCPP_ERROR(this->get_logger(), "Failed to get present PWM data for ID: %d", id);
         }
     }
+    groupSyncReadPWM->clearParam();
 
-    groupSyncRead->clearParam();
-
+    // Publish Data
     publishPresentPosition(ids_to_monitor, positions);
     publishPresentVelocity(ids_to_monitor, velocities);
     publishPresentLoad(ids_to_monitor, loads);
@@ -355,32 +433,36 @@ int main(int argc, char * argv[])
     portHandler = dynamixel::PortHandler::getPortHandler(DEVICE_NAME);
     packetHandler = dynamixel::PacketHandler::getPacketHandler(PROTOCOL_VERSION);
 
-    setupDynamixel(1);
-    setupDynamixel(2);
+    if (!portHandler || !packetHandler) {
+        RCLCPP_ERROR(rclcpp::get_logger("position_control_node"), "Failed to initialize PortHandler or PacketHandler");
+        return -1;
+    }
 
-    // Open Serial Port
-    dxl_comm_result = portHandler->openPort();
-    if (dxl_comm_result == false) {
+    if (!portHandler->openPort()) {
         RCLCPP_ERROR(rclcpp::get_logger("position_control_node"), "Failed to open the port!");
         return -1;
     } else {
         RCLCPP_INFO(rclcpp::get_logger("position_control_node"), "Succeeded to open the port.");
     }
 
-    // Set the baudrate of the serial port (use DYNAMIXEL Baudrate)
-    dxl_comm_result = portHandler->setBaudRate(BAUDRATE);
-    if (dxl_comm_result == false) {
+    if (!portHandler->setBaudRate(BAUDRATE)) {
         RCLCPP_ERROR(rclcpp::get_logger("position_control_node"), "Failed to set the baudrate!");
         return -1;
     } else {
         RCLCPP_INFO(rclcpp::get_logger("position_control_node"), "Succeeded to set the baudrate.");
     }
 
-    setupDynamixel(BROADCAST_ID);
+    setupDynamixel(1);
+    setupDynamixel(2);
 
     rclcpp::init(argc, argv);
 
     auto position_control_node = std::make_shared<PositionControlNode>();
+    if (!position_control_node) {
+        RCLCPP_ERROR(rclcpp::get_logger("position_control_node"), "Failed to initialize PositionControlNode");
+        return -1;
+    }
+
     // Use a MultiThreadedExecutor to handle callbacks concurrently
     rclcpp::executors::MultiThreadedExecutor executor;
     executor.add_node(position_control_node);
