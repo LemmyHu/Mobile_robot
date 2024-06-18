@@ -63,6 +63,9 @@ private:
     dynamixel::GroupSyncWrite *groupSyncWriteProfileVelocity; // Synchronized profile velocity writer
     dynamixel::GroupSyncWrite *groupSyncWriteGOALPWM; // Synchronized PWM
     dynamixel::GroupSyncRead *groupSyncReadPosition;       // Synchronized position reader
+    dynamixel::GroupSyncRead *groupSyncReadVelocity;
+    dynamixel::GroupSyncRead *groupSyncReadLoad;
+    dynamixel::GroupSyncRead *groupSyncReadPWM;
 
 
     int present_position;
