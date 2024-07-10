@@ -62,11 +62,11 @@ using namespace std::chrono_literals;
 uint8_t dxl_error = 0;
 int dxl_comm_result = COMM_TX_FAIL;
 
-const double wheel_diameter_cm = 6.5;
+const double wheel_diameter_cm = 0.065;
 const double wheel_circumference_cm = M_PI * wheel_diameter_cm;
 const double max_position_units_per_revolution = 4095;
 const double positional_units_per_cm = max_position_units_per_revolution / wheel_circumference_cm;
-const double wheel_base_cm = 14.75;
+const double wheel_base_cm = 0.1475;
 
 // Convert speed (linear and angular) to position units
 int32_t convertSpeedToPosition(double speed_cm_s)
@@ -135,7 +135,7 @@ PositionControlNode::PositionControlNode()
     present_velocity_publisher_ = this->create_publisher<PresentVelocity>("present_velocity", QOS_RKL10V);
 
     status_update_timer_ = this->create_wall_timer(
-            500ms,  // Adjust the period according to your needs
+            100ms,  // Adjust the period according to your needs
             std::bind(&PositionControlNode::periodicStatusUpdate, this));
 
     // Subscription to cmd_vel topic
@@ -145,20 +145,30 @@ PositionControlNode::PositionControlNode()
             [this](const geometry_msgs::msg::Twist::SharedPtr msg) -> void
             {
                 uint32_t profile_velocity = 270; // maximum velocity
+                uint32_t goal_pwm = 500;
                 double linear_velocity = msg->linear.x;  // in cm/s
                 double angular_velocity = msg->angular.z;  // in rad/s
+
+                // Log the received velocities
+                RCLCPP_INFO(this->get_logger(), "Received cmd_vel - Linear: %f, Angular: %f", linear_velocity, angular_velocity);
 
                 // Calculate wheel speeds
                 double v_left = linear_velocity - (angular_velocity * wheel_base_cm / 2.0);
                 double v_right = linear_velocity + (angular_velocity * wheel_base_cm / 2.0);
 
+                RCLCPP_INFO(this->get_logger(), "Computed Wheel Velocities - Left: %f, Right: %f", v_left, v_right);
+
                 // Convert wheel speeds to positional units
                 int32_t left_wheel_position = convertSpeedToPosition(v_left);
                 int32_t right_wheel_position = convertSpeedToPosition(v_right);
 
+                // Set left wheel position
+                RCLCPP_INFO(this->get_logger(), "Left Wheel Position: %d, Right Wheel Position: %d", left_wheel_position, right_wheel_position);
+
                 // Send positions to Dynamixel motors
                 std::vector<uint8_t> param_goal_position(LEN_GOAL_POSITION);
                 std::vector<uint8_t> param_profile_velocity(LEN_PROFILE_VELOCITY);
+                std::vector<uint8_t> param_goal_pwm(LEN_GOAL_PWM);
 
                 // Set left wheel position
                 param_goal_position[0] = DXL_LOBYTE(DXL_LOWORD(left_wheel_position));
@@ -171,6 +181,9 @@ PositionControlNode::PositionControlNode()
                 param_profile_velocity[2] = DXL_LOBYTE(DXL_HIWORD(profile_velocity));
                 param_profile_velocity[3] = DXL_HIBYTE(DXL_HIWORD(profile_velocity));
                 groupSyncWriteVelocity->addParam(1, param_profile_velocity.data());
+                param_goal_pwm[0] = DXL_LOBYTE(DXL_LOWORD(goal_pwm));
+                param_goal_pwm[1] = DXL_HIBYTE(DXL_LOWORD(goal_pwm));
+                groupSyncWritePWM->addParam(1, param_goal_pwm.data());
 
                 // Set right wheel position
                 param_goal_position[0] = DXL_LOBYTE(DXL_LOWORD(right_wheel_position));
@@ -183,6 +196,9 @@ PositionControlNode::PositionControlNode()
                 param_profile_velocity[2] = DXL_LOBYTE(DXL_HIWORD(profile_velocity));
                 param_profile_velocity[3] = DXL_HIBYTE(DXL_HIWORD(profile_velocity));
                 groupSyncWriteVelocity->addParam(2, param_profile_velocity.data());
+                param_goal_pwm[0] = DXL_LOBYTE(DXL_LOWORD(goal_pwm));
+                param_goal_pwm[1] = DXL_HIBYTE(DXL_LOWORD(goal_pwm));
+                groupSyncWritePWM->addParam(2, param_goal_pwm.data());
 
                 // Transmit sync write packet for position
                 dxl_comm_result = groupSyncWritePosition->txPacket();
@@ -196,6 +212,8 @@ PositionControlNode::PositionControlNode()
                     RCLCPP_ERROR(this->get_logger(), "SyncWrite Velocity Error: %s", packetHandler->getTxRxResult(dxl_comm_result));
                 }
                 groupSyncWriteVelocity->clearParam();
+
+                groupSyncWritePWM->clearParam();
             });
 }
 
@@ -335,10 +353,10 @@ void PositionControlNode::publishPresentPWM(const std::vector<int32_t>& ids, con
 
     message.pwms = corrected_pwms;
     present_pwm_publisher_->publish(message);
-    RCLCPP_INFO(this->get_logger(), "Published Present PWM: %zu IDs", ids.size());
-    for (size_t i = 0; i < ids.size(); ++i) {
-        RCLCPP_INFO(this->get_logger(), "ID: %d, PWM: %d", ids[i], corrected_pwms[i]);
-    }
+    //RCLCPP_INFO(this->get_logger(), "Published Present PWM: %zu IDs", ids.size());
+    //for (size_t i = 0; i < ids.size(); ++i) {
+    //    RCLCPP_INFO(this->get_logger(), "ID: %d, PWM: %d", ids[i], corrected_pwms[i]);
+    //}
 }
 
 void PositionControlNode::publishPresentLoad(const std::vector<int32_t>& ids, const std::vector<int32_t>& loads) {
@@ -354,10 +372,10 @@ void PositionControlNode::publishPresentLoad(const std::vector<int32_t>& ids, co
 
     message.loads = corrected_loads;
     present_load_publisher_->publish(message);
-    RCLCPP_INFO(this->get_logger(), "Published Present Load: %zu IDs", ids.size());
-    for (size_t i = 0; i < ids.size(); ++i) {
-        RCLCPP_INFO(this->get_logger(), "ID: %d, Load: %d", ids[i], corrected_loads[i]);
-    }
+    //RCLCPP_INFO(this->get_logger(), "Published Present Load: %zu IDs", ids.size());
+    //for (size_t i = 0; i < ids.size(); ++i) {
+    //    RCLCPP_INFO(this->get_logger(), "ID: %d, Load: %d", ids[i], corrected_loads[i]);
+    //}
 }
 
 void PositionControlNode::publishPresentPosition(const std::vector<int32_t>& ids, const std::vector<int32_t>& positions) {
@@ -389,10 +407,10 @@ void PositionControlNode::publishPresentVelocity(const std::vector<int32_t>& ids
     message.ids = ids;
     message.velocities = velocities;
     present_velocity_publisher_->publish(message);
-    RCLCPP_INFO(this->get_logger(), "Published Present Velocity: %zu IDs", ids.size());
-    for (size_t i = 0; i < ids.size(); ++i) {
-        RCLCPP_INFO(this->get_logger(), "ID: %d, Velocity: %d", ids[i], velocities[i]);
-    }
+    //RCLCPP_INFO(this->get_logger(), "Published Present Velocity: %zu IDs", ids.size());
+    //for (size_t i = 0; i < ids.size(); ++i) {
+    //    RCLCPP_INFO(this->get_logger(), "ID: %d, Velocity: %d", ids[i], velocities[i]);
+    //}
 }
 
 void setupDynamixel(int dxl_id)

@@ -7,6 +7,8 @@
 #include "tf2/LinearMath/Quaternion.h"
 #include "tf2/LinearMath/Matrix3x3.h"
 #include "nav_msgs/msg/odometry.hpp"
+#include "std_msgs/msg/float64.hpp"
+#include "geometry_msgs/msg/vector3_stamped.hpp"
 
 class PoseController : public rclcpp::Node
 {
@@ -14,52 +16,61 @@ public:
     PoseController()
             : Node("pose_controller")
     {
-        pose_subscription_ = this->create_subscription<geometry_msgs::msg::PoseStamped>(
-                "unity/robot_pose", 10, std::bind(&PoseController::pose_callback, this, std::placeholders::_1));
+        position_subscription_ = this->create_subscription<geometry_msgs::msg::Vector3Stamped>(
+                "unity/robot_position", 10, std::bind(&PoseController::position_callback, this, std::placeholders::_1));
+        rpy_subscription_ = this->create_subscription<geometry_msgs::msg::Vector3Stamped>(
+                "unity/robot_rpy", 10, std::bind(&PoseController::rpy_callback, this, std::placeholders::_1));
         velocity_publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
         odom_subscription_ = this->create_subscription<nav_msgs::msg::Odometry>(
                 "odom", 10, std::bind(&PoseController::odom_callback, this, std::placeholders::_1));
     }
 
 private:
-    void pose_callback(const geometry_msgs::msg::PoseStamped::SharedPtr msg)
+    void position_callback(const geometry_msgs::msg::Vector3Stamped::SharedPtr msg)
     {
-        // Extract target pose from message
-        const auto& target_pose = msg->pose;
+        // Extract target position from message
+        target_position_ = msg->vector;
 
+        RCLCPP_INFO(this->get_logger(), "Received target_position.x: %f", target_position_.x);
+        RCLCPP_INFO(this->get_logger(), "Received target_position.y: %f", target_position_.y);
+
+        // Calculate and publish velocity commands
+        calculate_and_publish_velocity();
+    }
+
+    void rpy_callback(const geometry_msgs::msg::Vector3Stamped::SharedPtr msg)
+    {
+        // Extract target RPY from message
+        target_rpy_ = msg->vector;
+
+        RCLCPP_INFO(this->get_logger(), "Received target_yaw: %f", target_rpy_.z);
+
+        // Calculate and publish velocity commands
+        calculate_and_publish_velocity();
+    }
+
+    void calculate_and_publish_velocity()
+    {
         // Calculate the difference between the current pose and the target pose
-        double error_x = target_pose.position.x - current_pose_.position.x;
-        double error_y = target_pose.position.y - current_pose_.position.y;
+        double error_x = target_position_.x;
+        double error_y = target_position_.y;
 
-        tf2::Quaternion target_quat, current_quat;
-        tf2::convert(target_pose.orientation, target_quat);
-        tf2::convert(current_pose_.orientation, current_quat);
-
-        // Extract yaw from the quaternions using tf2::Matrix3x3
-        double target_roll, target_pitch, target_yaw;
-        double current_roll, current_pitch, current_yaw;
-        tf2::Matrix3x3(target_quat).getRPY(target_roll, target_pitch, target_yaw);
-        tf2::Matrix3x3(current_quat).getRPY(current_roll, current_pitch, current_yaw);
-        double error_yaw = target_yaw - current_yaw;
+        // Use target RPY directly
+        double target_yaw = target_rpy_.z;
 
         // Normalize the yaw error to the range [-pi, pi]
-        error_yaw = atan2(sin(error_yaw), cos(error_yaw));
+        //target_yaw = atan2(sin(target_yaw), cos(target_yaw));
 
         // Calculate control commands
         double distance = std::sqrt(error_x * error_x + error_y * error_y);
-        double angle_to_target = std::atan2(error_y, error_x);
-        double angle_diff = angle_to_target - current_yaw;
-
-        // Normalize the angle difference to the range [-pi, pi]
-        angle_diff = atan2(sin(angle_diff), cos(angle_diff));
 
         // Define control gains
-        const double K_linear = 1.0;
-        const double K_angular = 1.0;
+        const double K_linear = 1;
+        const double K_angular = 0.018;
 
         // Calculate velocity commands
         double linear_velocity = K_linear * distance;
-        double angular_velocity = K_angular * (angle_diff + error_yaw);
+        double angular_velocity = K_angular * target_yaw;
 
         // Publish velocity commands
         geometry_msgs::msg::Twist cmd;
@@ -73,10 +84,14 @@ private:
         current_pose_ = msg->pose.pose;
     }
 
-    rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr pose_subscription_;
+    rclcpp::Subscription<geometry_msgs::msg::Vector3Stamped>::SharedPtr position_subscription_;
+    rclcpp::Subscription<geometry_msgs::msg::Vector3Stamped>::SharedPtr rpy_subscription_;
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_subscription_;
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr velocity_publisher_;
     geometry_msgs::msg::Pose current_pose_;  // Current pose of the robot from odometry
+
+    geometry_msgs::msg::Vector3 target_position_; // Target position from Unity
+    geometry_msgs::msg::Vector3 target_rpy_;      // Target RPY from Unity
 };
 
 int main(int argc, char * argv[])

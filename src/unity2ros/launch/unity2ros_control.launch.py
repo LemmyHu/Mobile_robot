@@ -19,4 +19,9 @@ def generate_launch_description():
             executable='pose_controller',
             name='pose_controller'
         ),
+        Node(
+            package='unity2ros',
+            executable='vector3tounity',
+            name='vector3tounity'
+        ),
     ])

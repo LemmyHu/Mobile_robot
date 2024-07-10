@@ -40,6 +40,13 @@ ament_target_dependencies(unity2ros_control_node
         rclcpp
         geometry_msgs
 )
+add_executable(unity2ros_velocity_control_node src/unity2ros_velocity_control_node.cpp)
+ament_target_dependencies(unity2ros_velocity_control_node
+        dynamixel_sdk_custom_interfaces
+        dynamixel_sdk
+        rclcpp
+        geometry_msgs
+)
 add_executable(pid_client_node src/pid_client_node.cpp)
 ament_target_dependencies(pid_client_node
         dynamixel_sdk_custom_interfaces
@@ -51,6 +58,7 @@ install(TARGETS
   velocity_control_node
   position_control_node
   unity2ros_control_node
+  unity2ros_velocity_control_node
   pid_client_node
   DESTINATION lib/${PROJECT_NAME}
 )
