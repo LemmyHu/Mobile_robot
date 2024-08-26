@@ -16,6 +16,7 @@ find_package(dynamixel_sdk REQUIRED)
 find_package(dynamixel_sdk_custom_interfaces REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
 
 include_directories(include)
 
@@ -47,6 +48,13 @@ ament_target_dependencies(unity2ros_velocity_control_node
         rclcpp
         geometry_msgs
 )
+add_executable(unity2ros_xdrive_control_node src/unity2ros_xdrive_control_node.cpp)
+ament_target_dependencies(unity2ros_xdrive_control_node
+        dynamixel_sdk_custom_interfaces
+        dynamixel_sdk
+        rclcpp
+        std_msgs
+)
 add_executable(pid_client_node src/pid_client_node.cpp)
 ament_target_dependencies(pid_client_node
         dynamixel_sdk_custom_interfaces
@@ -59,6 +67,7 @@ install(TARGETS
   position_control_node
   unity2ros_control_node
   unity2ros_velocity_control_node
+  unity2ros_xdrive_control_node
   pid_client_node
   DESTINATION lib/${PROJECT_NAME}
 )

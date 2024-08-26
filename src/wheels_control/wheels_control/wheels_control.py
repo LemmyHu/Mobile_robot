@@ -33,15 +33,15 @@ class MotorController(Node):
 
     def move_forward(self):
         self.get_logger().info('Moving forward 50cm')
-        self.move_motor(50)
+        self.move_motor(60)
         self.action_timer.cancel()  # Cancel the current timer
-        self.action_timer = self.create_timer(6, self.move_backward)  # Set a timer for the backward action
+        self.action_timer = self.create_timer(7, self.move_backward)  # Set a timer for the backward action
 
     def move_backward(self):
         self.get_logger().info('Moving backward 50cm')
         self.move_motor(0)
         self.action_timer.cancel()  # Cancel the current timer
-        self.action_timer = self.create_timer(6, self.move_forward)  # Set the timer to move forward again
+        self.action_timer = self.create_timer(7, self.move_forward)  # Set the timer to move forward again
 
 
 def main(args=None):

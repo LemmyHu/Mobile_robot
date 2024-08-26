@@ -10,6 +10,7 @@ setup(
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/launch', ['launch/wheels_control.launch.py']),
         ('share/' + package_name + '/launch', ['launch/predefined_path.launch.py']),
+        ('share/' + package_name + '/launch', ['launch/synchronized_node.launch.py']),
         ('share/ament_index/resource_index/packages', ['resource/' + package_name])
     ],
     install_requires=['setuptools'],
