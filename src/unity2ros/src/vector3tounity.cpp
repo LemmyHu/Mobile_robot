@@ -62,16 +62,15 @@ private:
         // Calculate the average displacement and the change in orientation
         double distance = (left_wheel_displacement + right_wheel_displacement) / 2.0;
         double delta_theta = (right_wheel_displacement - left_wheel_displacement) / WHEEL_BASE;
-        RCLCPP_INFO(this->get_logger(), "delta_theta: %f", delta_theta);
-        RCLCPP_INFO(this->get_logger(), "distance: %f", distance);
+        //RCLCPP_INFO(this->get_logger(), "delta_theta: %f", delta_theta);
+        //RCLCPP_INFO(this->get_logger(), "distance: %f", distance);
 
         const double K_angular = 0.018;
-        double delta_theta_k = delta_theta / K_angular;
         // Calculate the change in pose
-        double delta_x = distance * std::cos(theta_k + delta_theta_k / 2.0);
-        double delta_y = distance * std::sin(theta_k + delta_theta_k / 2.0);
-        RCLCPP_INFO(this->get_logger(), "delta_x: %f", delta_x);
-        RCLCPP_INFO(this->get_logger(), "delta_y: %f", delta_y);
+        double delta_x = distance * std::sin(theta_ + delta_theta / 2.0);
+        double delta_y = distance * std::cos(theta_ + delta_theta / 2.0);
+        //RCLCPP_INFO(this->get_logger(), "delta_x: %f", delta_x);
+        //RCLCPP_INFO(this->get_logger(), "delta_y: %f", delta_y);
 
 
         // Update the robot's position and orientation
@@ -81,8 +80,8 @@ private:
         theta_k += delta_theta / K_angular;
         //RCLCPP_INFO(this->get_logger(), "x_: %f", x_);
         //RCLCPP_INFO(this->get_logger(), "y_: %f", y_);
-        RCLCPP_INFO(this->get_logger(), "theta_: %f", theta_);
-        RCLCPP_INFO(this->get_logger(), "theta_k: %f", theta_k);
+        //RCLCPP_INFO(this->get_logger(), "theta_: %f", theta_);
+        //RCLCPP_INFO(this->get_logger(), "theta_k: %f", theta_k);
 
         auto position_msg = geometry_msgs::msg::Vector3Stamped();
         position_msg.header.stamp = current_time;
