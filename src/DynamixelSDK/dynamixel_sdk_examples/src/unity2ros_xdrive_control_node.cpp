@@ -8,15 +8,21 @@
 #include "dynamixel_sdk/dynamixel_sdk.h"
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/int32.hpp"
+#include "dynamixel_sdk_custom_interfaces/msg/present_load.hpp"
+#include "dynamixel_sdk_custom_interfaces/msg/present_position.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/present_velocity.hpp"
 
 // Control table address for X series (except XL-320)
 #define ADDR_OPERATING_MODE 11
 #define ADDR_TORQUE_ENABLE 64
+#define ADDR_PRESENT_LOAD 126
 #define ADDR_PRESENT_POSITION 132
+#define ADDR_PRESENT_VELOCITY 128
 #define ADDR_GOAL_POSITION 116
 #define LEN_GOAL_POSITION 4
 #define LEN_PRESENT_POSITION 4
+#define LEN_PRESENT_VELOCITY 4
+#define LEN_PRESENT_LOAD 2
 
 // Protocol version
 #define PROTOCOL_VERSION 2.0  // Default Protocol version of DYNAMIXEL X series.
@@ -29,6 +35,8 @@ dynamixel::PortHandler *portHandler;
 dynamixel::PacketHandler *packetHandler;
 dynamixel::GroupSyncWrite *groupSyncWritePosition;
 dynamixel::GroupSyncRead *groupSyncReadPosition;
+dynamixel::GroupSyncRead *groupSyncReadVelocity;
+dynamixel::GroupSyncRead *groupSyncReadLoad;
 
 using namespace std::chrono_literals;
 
@@ -53,6 +61,16 @@ public:
             RCLCPP_ERROR(this->get_logger(), "Failed to initialize GroupSyncReadPosition");
             return;
         }
+        groupSyncReadVelocity = new dynamixel::GroupSyncRead(portHandler, packetHandler, ADDR_PRESENT_VELOCITY, LEN_PRESENT_VELOCITY);
+        if (!groupSyncReadPosition) {
+            RCLCPP_ERROR(this->get_logger(), "Failed to initialize GroupSyncReadVelocity");
+            return;
+        }
+        groupSyncReadLoad = new dynamixel::GroupSyncRead(portHandler, packetHandler, ADDR_PRESENT_LOAD, LEN_PRESENT_LOAD);
+        if (!groupSyncReadPosition) {
+            RCLCPP_ERROR(this->get_logger(), "Failed to initialize GroupSyncReadLoad");
+            return;
+        }
 
         this->declare_parameter("qos_depth", 10);
         int8_t qos_depth = 0;
@@ -64,24 +82,28 @@ public:
                 "x_drive_target_left",
                 QOS_RKL10V,
                 [this](const std_msgs::msg::Int32::SharedPtr msg) -> void {
-                    RCLCPP_INFO(this->get_logger(), "Received x_drive_target_left: %d", msg->data);
-                    sendPositionToMotor(1, msg->data);
+                    int32_t modified_data = msg->data * 3;
+                    RCLCPP_INFO(this->get_logger(), "Received x_drive_target_left: %d, Modified: %d", msg->data, modified_data);
+                    sendPositionToMotor(1, modified_data);
                 });
 
         x_drive_right_subscriber_ = this->create_subscription<std_msgs::msg::Int32>(
                 "x_drive_target_right",
                 QOS_RKL10V,
                 [this](const std_msgs::msg::Int32::SharedPtr msg) -> void {
-                    RCLCPP_INFO(this->get_logger(), "Received x_drive_target_right: %d", msg->data);
-                    sendPositionToMotor(2, msg->data);
+                    int32_t modified_data = msg->data * 3;
+                    RCLCPP_INFO(this->get_logger(), "Received x_drive_target_right: %d, Modified: %d", msg->data, modified_data);
+                    sendPositionToMotor(2, modified_data);
                 });
 
         // Publisher for present positions
-        present_position_publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::PresentVelocity>("present_position", QOS_RKL10V);
+        present_position_publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::PresentPosition>("present_position", QOS_RKL10V);
+        present_velocity_publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::PresentVelocity>("present_velocity", QOS_RKL10V);
+        present_load_publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::PresentLoad>("present_load", QOS_RKL10V);
 
         // Timer to periodically read and publish present positions
         read_position_timer_ = this->create_wall_timer(
-                100ms, std::bind(&XDriveControlNode::publishPresentPositions, this));
+                100ms, std::bind(&XDriveControlNode::publishPresentData, this));
     }
 
     ~XDriveControlNode()
@@ -94,12 +116,22 @@ public:
             delete groupSyncReadPosition;
             groupSyncReadPosition = nullptr;
         }
+        if (groupSyncReadVelocity) {
+            delete groupSyncReadVelocity;
+            groupSyncReadVelocity = nullptr;
+        }
+        if (groupSyncReadLoad) {
+            delete groupSyncReadLoad;
+            groupSyncReadLoad = nullptr;
+        }
     }
 
 private:
     rclcpp::Subscription<std_msgs::msg::Int32>::SharedPtr x_drive_left_subscriber_;
     rclcpp::Subscription<std_msgs::msg::Int32>::SharedPtr x_drive_right_subscriber_;
-    rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::PresentVelocity>::SharedPtr present_position_publisher_;
+    rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::PresentPosition>::SharedPtr present_position_publisher_;
+    rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::PresentVelocity>::SharedPtr present_velocity_publisher_;
+    rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::PresentLoad>::SharedPtr present_load_publisher_;
     rclcpp::TimerBase::SharedPtr read_position_timer_;
 
     void sendPositionToMotor(int motor_id, int32_t position)
@@ -128,10 +160,12 @@ private:
         groupSyncWritePosition->clearParam();
     }
 
-    void publishPresentPositions()
+    void publishPresentData()
     {
         std::vector<int32_t> ids = {1, 2};
         std::vector<int32_t> positions;
+        std::vector<int32_t> velocities;
+        std::vector<int32_t> loads;
 
         // Read Present Position
         for (int32_t id : ids) {
@@ -139,12 +173,24 @@ private:
                 RCLCPP_ERROR(this->get_logger(), "Failed to addParam for ID: %d", id);
                 return;
             }
+            if (!groupSyncReadVelocity->addParam(id)) {
+                RCLCPP_ERROR(this->get_logger(), "Failed to addParam for Velocity ID: %d", id);
+                return;
+            }
+            if (!groupSyncReadLoad->addParam(id)) {
+                RCLCPP_ERROR(this->get_logger(), "Failed to addParam for Load ID: %d", id);
+                return;
+            }
         }
+
+        // Perform the sync read
         int dxl_comm_result = groupSyncReadPosition->txRxPacket();
         if (dxl_comm_result != COMM_SUCCESS) {
             RCLCPP_ERROR(this->get_logger(), "GroupSyncRead Position Error: %s", packetHandler->getTxRxResult(dxl_comm_result));
             return;
         }
+
+        // Read and store the positions
         for (int32_t id : ids) {
             if (groupSyncReadPosition->isAvailable(id, ADDR_PRESENT_POSITION, LEN_PRESENT_POSITION)) {
                 int32_t position = groupSyncReadPosition->getData(id, ADDR_PRESENT_POSITION, LEN_PRESENT_POSITION);
@@ -154,15 +200,62 @@ private:
                 positions.push_back(0);  // Add zero if reading fails
             }
         }
+
+        // Perform sync read for velocity
+        dxl_comm_result = groupSyncReadVelocity->txRxPacket();
+        if (dxl_comm_result != COMM_SUCCESS) {
+            RCLCPP_ERROR(this->get_logger(), "GroupSyncRead Velocity Error: %s", packetHandler->getTxRxResult(dxl_comm_result));
+            return;
+        }
+
+        for (int32_t id : ids) {
+            if (groupSyncReadVelocity->isAvailable(id, ADDR_PRESENT_VELOCITY, LEN_PRESENT_VELOCITY)) {
+                int32_t velocity = groupSyncReadVelocity->getData(id, ADDR_PRESENT_VELOCITY, LEN_PRESENT_VELOCITY);
+                velocities.push_back(velocity);
+            } else {
+                RCLCPP_ERROR(this->get_logger(), "Failed to get present velocity data for ID: %d", id);
+                velocities.push_back(0);
+            }
+        }
+
+        // Perform sync read for load
+        dxl_comm_result = groupSyncReadLoad->txRxPacket();
+        if (dxl_comm_result != COMM_SUCCESS) {
+            RCLCPP_ERROR(this->get_logger(), "GroupSyncRead Load Error: %s", packetHandler->getTxRxResult(dxl_comm_result));
+            return;
+        }
+
+        for (int32_t id : ids) {
+            if (groupSyncReadLoad->isAvailable(id, ADDR_PRESENT_LOAD, LEN_PRESENT_LOAD)) {
+                int32_t load = groupSyncReadLoad->getData(id, ADDR_PRESENT_LOAD, LEN_PRESENT_LOAD);
+                loads.push_back(load > 32767 ? load - 65536 : load);  // Correct signed value
+            } else {
+                RCLCPP_ERROR(this->get_logger(), "Failed to get present load data for ID: %d", id);
+                loads.push_back(0);
+            }
+        }
+
         groupSyncReadPosition->clearParam();
+        groupSyncReadVelocity->clearParam();
+        groupSyncReadLoad->clearParam();
 
-        // Publish the present positions
-        auto message = dynamixel_sdk_custom_interfaces::msg::PresentVelocity();
-        message.ids = ids;
-        message.velocities = positions; // Adjusted to use the positions vector
-        present_position_publisher_->publish(message);
+        auto position_message = dynamixel_sdk_custom_interfaces::msg::PresentPosition();
+        position_message.ids = ids;
+        position_message.positions = positions;
+        present_position_publisher_->publish(position_message);
 
-        RCLCPP_INFO(this->get_logger(), "Published Present Positions: Left: %d, Right: %d", positions[0], positions[1]);
+        auto velocity_message = dynamixel_sdk_custom_interfaces::msg::PresentVelocity();
+        velocity_message.ids = ids;
+        velocity_message.velocities = velocities;
+        present_velocity_publisher_->publish(velocity_message);
+
+        auto load_message = dynamixel_sdk_custom_interfaces::msg::PresentLoad();
+        load_message.ids = ids;
+        load_message.loads = loads;
+        present_load_publisher_->publish(load_message);
+
+        RCLCPP_INFO(this->get_logger(), "Published Present Data: Positions: [%d, %d], Velocities: [%d, %d], Loads: [%d, %d]",
+                    positions[0], positions[1], velocities[0], velocities[1], loads[0], loads[1]);
     }
 };
 
