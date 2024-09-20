@@ -34,6 +34,8 @@ class MotorController(Node):
         msg = SetPosition()
         msg.ids = [1, 2]
         msg.positions = [self.home_position_right, self.home_position_left]
+        msg.profile_velocities = [270, 270]
+        msg.goal_pwms = [855, 855]
         self.publisher_.publish(msg)
         self.current_position_right = self.home_position_right  # Reset current positions
         self.current_position_left = self.home_position_left
@@ -46,6 +48,8 @@ class MotorController(Node):
         msg = SetPosition()
         msg.ids = [1, 2]  # Assuming two motors move the same for forward motion
         msg.positions = [self.current_position_right, self.current_position_left]
+        msg.profile_velocities = [270, 270]
+        msg.goal_pwms = [855, 855]
         self.publisher_.publish(msg)
 
     def rotate(self, degrees):
@@ -74,6 +78,8 @@ class MotorController(Node):
         msg = SetPosition()
         msg.ids = [1, 2]
         msg.positions = [self.current_position_right, self.current_position_left]
+        msg.profile_velocities = [270, 270]
+        msg.goal_pwms = [855, 855]
         self.publisher_.publish(msg)
 
 

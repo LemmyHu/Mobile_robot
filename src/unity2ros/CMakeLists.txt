@@ -21,9 +21,9 @@ find_package(dynamixel_sdk_custom_interfaces REQUIRED)
 
 add_executable(pose_controller src/pose_controller.cpp)
 add_executable(odometry_node src/odometry_node.cpp)
+add_executable(twisttounity src/twisttounity.cpp)
 add_executable(vector3tounity src/vector3tounity.cpp)
 add_executable(velocity_controller src/velocity_controller.cpp)
-add_executable(twisttounity src/twisttounity.cpp)
 
 ament_target_dependencies(pose_controller
         rclcpp
@@ -42,6 +42,12 @@ ament_target_dependencies(odometry_node
         tf2
         tf2_geometry_msgs
 )
+ament_target_dependencies(twisttounity
+        dynamixel_sdk_custom_interfaces
+        geometry_msgs
+        std_msgs
+        rclcpp
+)
 ament_target_dependencies(vector3tounity
         dynamixel_sdk_custom_interfaces
         geometry_msgs
@@ -56,12 +62,6 @@ ament_target_dependencies(velocity_controller
         std_msgs
         rclcpp
 )
-ament_target_dependencies(twisttounity
-        dynamixel_sdk_custom_interfaces
-        geometry_msgs
-        std_msgs
-        rclcpp
-)
 
 include_directories(
         ${dynamixel_sdk_custom_interfaces_INCLUDE_DIRS})
@@ -69,10 +69,11 @@ include_directories(
 install(TARGETS
         pose_controller
         odometry_node
+        twisttounity
         vector3tounity
         velocity_controller
-        twisttounity
         DESTINATION lib/${PROJECT_NAME})
+        
 install(DIRECTORY
         launch
         DESTINATION share/${PROJECT_NAME})
